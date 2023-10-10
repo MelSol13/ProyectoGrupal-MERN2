@@ -31,7 +31,7 @@
     margin-top: 30px;
 }
 
-.btn-vista{
+.btn-vista1{
     color:rgba(29, 10, 10, 0.685);
     font-weight: bold;
     font-size: 20px;
@@ -39,11 +39,15 @@
     background-color: rgb(209, 86, 115);
     margin-top: 50px;
     margin-left: 50px;
-    width: 150px;
+    width: 200px;
     height: 50px;
     border-radius: 10px;
-    box-shadow: 5px 5px 7px rgb(88, 17, 62);
+    box-shadow: 5px 5px 7px rgb(216, 89, 169);
 }
+
+  .btn-vista1:hover {
+  background-color: #e631e6;
+  }
 
 .titulo-colores1{
     font-size: 40px;

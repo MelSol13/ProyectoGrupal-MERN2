@@ -1,11 +1,10 @@
-.pedido-edit {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    font-size: 35px;
-    font-weight: bold;
+.pedido-tit {
+    margin-left: 50px;
+    margin-right: 200px;
+    font-size: 46px;
+    font-weight: 'bold';
     font-style: italic;
-    margin-left: 200px;
-
+    color: rgb(177, 28, 157);
 }
 
 .fondo4 {
@@ -25,18 +24,38 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(226, 200, 230);
     padding: 10px 20px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     margin-left: 70px;
     width: auto;
     height: auto;
-    margin-left: 200px;
+    margin-left: 250px;
 }
 
 .form-group2 {
-    margin-left: 5px;
+    margin-left: 10px;
     font-size: 20px;
-
     margin-top: 35px;
+}
+
+.btn-vista2 {
+
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 50px;
+    margin-top: 30px;
+    background-color: rgb(62, 161, 123);
+    padding: 25px 25px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 270px;
+    height: 70px;
+
+}
+
+.btn-vista2:hover {
+    background-color: #1e169b;
 }
