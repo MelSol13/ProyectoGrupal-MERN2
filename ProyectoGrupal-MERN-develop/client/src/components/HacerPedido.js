@@ -60,7 +60,7 @@ const HacerPedido = () => {
                 if (err.response.status === 401) {
                     navigate("/iniciar-sesion");
                 } else {
-                    setErrores(err.response.data.errores);
+                    setErrores(err.response.data.errors);
                 }
             });
     };
