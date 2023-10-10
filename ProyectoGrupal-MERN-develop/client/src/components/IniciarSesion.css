@@ -1,0 +1,30 @@
+.sesion{
+    width: 1900px;
+    height: 900px;
+    padding-top: 80px;
+    background: url(https://img.freepik.com/free-photo/abstract-coral-orange-color-background_53876-104720.jpg?w=1380&t=st=1696285120~exp=1696285720~hmac=60fcaced293f22de941c7a97448a39c85d2ad49e8368e2b3e6a9743fb13cb788);
+    background-size: 1900px;
+    background-repeat: no-repeat;
+}
+
+.row2{
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 800px;
+}
+
+.inic-tit{
+    color: rgb(210, 106, 68);
+    font-family: Cochin;
+}
+
+.bot-inic{
+    width: 200px;
+    color: brown;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid rgb(105, 43, 43);
+    border-radius: 20px;
+    background-color: rgb(206, 135, 110);
+    box-shadow: 5px 5px 7px rgb(156, 54, 16);
+}

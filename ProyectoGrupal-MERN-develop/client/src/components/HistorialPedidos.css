@@ -1,0 +1,66 @@
+.fondo5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-image: url("https://img.freepik.com/premium-vector/watercolor-abstract-background_23-2149147672.jpg?w=740");
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -1;
+    background-color: rgba(8, 96, 131, 0.9);
+}
+.nav-historial{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(144, 206, 226);
+    margin-bottom: 50px;
+    justify-content: space-between;
+    margin-left: 70px;
+    margin-top: 15px;
+}
+
+.hist-tit{
+    margin-left: 50px;
+    margin-right: 200px;
+    font-size: 40px; 
+    font-weight: 'bold';
+    font-style: italic;
+}
+
+.log-out2{
+    margin-left: 50px;
+    padding: 5px 10px;
+    background-color: #f00; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    font-weight: 'bold';
+  }
+  
+  .log-out2:hover {
+    background-color: #d755ff;
+  }
+
+  .btn-success{
+    cursor: pointer; 
+    font-size: 17px; 
+    background-color: rgb(57, 74, 226); 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    font-weight: 'bold';
+
+  }
+  .btn-success:hover {
+    background-color: #e06830;
+  }
+
+  .table-hover{
+    margin-left: 70px;
+    margin-top: 15px;
+    
+  }

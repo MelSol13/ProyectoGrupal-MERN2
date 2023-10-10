@@ -1,0 +1,607 @@
+@media(width <= 481px){
+    .fondo{
+        border: 1px solid rgb(56, 55, 55);
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        width: 725px;
+        height: 2000px;
+    }
+    
+    .barraSuperior{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 300px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        margin-bottom: 50px ;
+        margin-top: 30px;
+    }
+    
+    .sitioNombre{
+        font-size: 70px;
+        font-weight: bold;
+        display: flex;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+    
+    .logo{
+        display: flex;
+        width: 250px;
+        margin-right: 50px;
+        border-radius: 50%;
+        border: 2px solid rgb(51, 48, 48);
+    }
+    
+    .body{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .columna-izquierda{
+        color: ghostwhite;
+        margin-top: 20px;
+        border: 1px solid rgb(128, 128, 128);
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 10px;
+        height: 1500px;
+        border: 2px solid rgb(31, 30, 30) ;
+    }
+    
+    .eslogan{
+        color: rgb(235, 217, 217);
+        display: flex;
+        flex-direction: row;
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-bottom: 50px;
+        -webkit-text-stroke: 0.5px rgb(47, 46, 44);
+    }
+    
+    .descripcion{
+        font-size: 35px;
+        margin-top: 40px;
+        margin-left: 30px;
+        margin-bottom: 50px;
+    }
+    
+    ul{
+        list-style-type: circle;
+        font-size: 30px;
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+
+    .contacto{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    
+    .logo-whats{
+        width: 70px;
+        border-radius: 50%;
+        margin-top: 100px;
+        margin-left: 5px;
+        margin-right: 20px ;
+    }
+    
+    .numero{
+        margin-top: 105px;
+        font-size: 25px;
+    }
+
+
+    .columna-derecha{
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #imagen1{
+        width: 320px;
+        margin-top: 80px;
+        margin-bottom: 100px;
+        margin-left: 30px;
+        border-radius: 30px;
+        border: 4px solid rgb(33, 31, 31);
+    }
+
+    .animate__animated.animate__rollIn {
+        --animate-duration: 7s;
+    }
+    
+    #imagen2{
+        width: 320px;
+        margin-left: 30px;
+        margin-right: 80px;
+        border-radius: 30px;
+        border: 4px solid rgb(33, 31, 31);
+    }
+    
+    .animate__animated.animate__jackInTheBox {
+        --animate-duration: 7s;
+    }
+
+    #imagen3{
+        width: 320px;
+        height: 340px;
+        margin-left: 30px;
+        margin-top: 120px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        border: 4px solid rgb(33, 31, 31);
+    }
+
+    .animate__animated.animate__zoomInUp {
+        --animate-duration: 7s;
+    }
+    
+    .botones{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .btn-cambios{
+        display: flex;
+        align-items: center;
+        color: rgb(228, 230, 232);
+        font-size: 25px;
+        font-weight: bold;
+        padding: 10px;
+        background-color: rgb(215, 128, 96);
+        width: 300px;
+        height: 100px;
+        margin-left: 30px;
+        margin-right: 40px;
+        border: 1px solid rgb(30, 29, 29);
+        border-radius: 20px;
+        margin-bottom: 50px;
+    }
+    
+    .btn-sitio{
+        display: flex;
+        align-items: center;
+        width: 300px;
+        height: 100px;
+        color: rgb(228, 230, 232);
+        background-color: rgb(184, 83, 46);
+        font-size: 25px;
+        font-weight: bold;
+        border: 1px solid rgb(33, 32, 32);
+        border-radius: 20px;
+        margin-right: 350px;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+    
+    .btn-borrar{
+        background-color: rgb(193, 28, 28);
+        color: whitesmoke;
+        font-size: 25px;
+        font-weight: bold;
+        width: 1000px;
+        height: 100px;
+        border: 1px solid rgb(54, 52, 52);
+        border-radius: 20px;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+
+    .btn-logout{
+        background-color: rgb(232, 100, 18);
+        color: whitesmoke;
+        font-family: 'Trebuchet MS';
+        font-size: 20px;
+        border: 2px solid rgb(48, 46, 46);
+        border-radius: 5px;
+        margin-left: 600px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width:150px;
+        box-shadow: 5px 5px 7px rgb(150, 62, 25);
+    }
+}
+
+@media (482px <= width <= 1023px){
+    .fondo{
+        border: 1px solid rgb(56, 55, 55);
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        width:1300px;
+        height: 2300px;
+    }
+    
+    .barraSuperior{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: 1px solid gray;
+        border-radius: 20px;
+        margin-bottom: 50px ;
+        margin-top: 30px;
+        height: 300px;
+    }
+    
+    .sitioNombre{
+        font-size: 100px;
+        font-weight: bold;
+        display: flex;
+        margin-right: 250px;
+        margin-left: 40px;
+    }
+    
+    .logo{
+        display: flex;
+        width: 400px;
+        margin-right: 50px;
+        border-radius: 50%;
+        border: 2px solid rgb(51, 48, 48);
+    }
+    
+    .body{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .columna-izquierda{
+        color: ghostwhite;
+        margin-top: 40px;
+        border: 1px solid rgb(128, 128, 128);
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        height: 1750px;
+        border: 2px solid rgb(31, 30, 30) ;
+        padding: 30px;
+    }
+    
+    .eslogan{
+        color: rgb(235, 217, 217);
+        display: flex;
+        flex-direction: row;
+        font-size: 70px;
+        font-weight: bold;
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        -webkit-text-stroke: 0.5px rgb(47, 46, 44);
+    }
+    
+    .descripcion{
+        font-size: 45px;
+        margin-top: 80px;
+        margin-left: 30px;
+        margin-bottom: 80px;
+    }
+    
+    ul{
+        list-style-type: circle;
+        font-size: 35px;
+        margin-top: 70px;
+        margin-left: 30px;
+    }
+
+    .contacto{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+    }
+    
+    .logo-whats{
+        width: 80px;
+        border-radius: 50%;
+        margin-top: 150px;
+        margin-left: 50px;
+        margin-right: 20px ;
+    }
+    
+    .numero{
+        margin-top: 150px;
+        font-size: 35px;
+    }
+
+
+    .columna-derecha{
+        margin-top: 20px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start ;
+    }
+    
+    #imagen1{
+        width: 500px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        margin-left: 100px;
+        border-radius: 30px;
+        border: 4px solid rgb(33, 31, 31);
+    }
+
+    .animate__animated.animate__rollIn {
+        --animate-duration: 7s;
+    }
+    
+    #imagen2{
+        width: 500px;
+        margin-left: 100px;
+        margin-right: 80px;
+        margin-top: 40px;
+        border-radius: 30px;
+        border: 4px solid rgb(33, 31, 31);
+    }
+    
+    .animate__animated.animate__jackInTheBox {
+        --animate-duration: 7s;
+    }
+
+    #imagen3{
+        width: 500px;
+        height: 500px;
+        margin-left: 100px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        border: 4px solid rgb(33, 31, 31);
+    }
+
+    .animate__animated.animate__zoomInUp {
+        --animate-duration: 7s;
+    }
+    
+    .botones{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .btn-cambios{
+        color: rgb(228, 230, 232);
+        font-size: 40px;
+        font-weight: bold;
+        padding: 10px;
+        background-color: rgb(215, 128, 96);
+        width: 300px;
+        height: 150px;
+        margin-left: 50px;
+        margin-right: 100px;
+        margin-bottom: 20px;
+        border: 1px solid rgb(30, 29, 29);
+        border-radius: 20px;
+    }
+    
+    .btn-sitio{
+        width: 300px;
+        color: rgb(228, 230, 232);
+        background-color: rgb(184, 83, 46);
+        font-size: 40px;
+        font-weight: bold;
+        border: 1px solid rgb(33, 32, 32);
+        border-radius: 20px;
+        margin-right: 550px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    
+    .btn-borrar{
+        background-color: rgb(193, 28, 28);
+        color: whitesmoke;
+        font-size: 50px;
+        font-weight: bold;
+        width: 1000px;
+        height: 100px;
+        border: 1px solid rgb(54, 52, 52);
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .btn-logout{
+        background-color: rgb(232, 100, 18);
+        color: whitesmoke;
+        font-family: 'Trebuchet MS';
+        font-size: 35px;
+        border: 2px solid rgb(48, 46, 46);
+        border-radius: 5px;
+        margin-left: 1000px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        width:150px;
+    }
+}
+
+@media (1023px <= width){
+.fondo{
+    border: 1px solid rgb(56, 55, 55);
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    margin-left: 100px;
+    height: 800px;
+}
+
+.barraSuperior{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 20px;
+    height: 150px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.sitioNombre{
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-right: 600px;
+}
+
+.logo{
+    display: flex;
+    width: 165px;
+    margin-right: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(51, 48, 48);
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+}
+
+.columna-izquierda{
+    color: ghostwhite;
+    margin-top: 20px;
+    border: 1px solid rgb(128, 128, 128);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 575px;
+    padding: 10px;
+}
+
+.eslogan{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 50px;
+    -webkit-text-stroke: 0.5px rgb(47, 46, 44);
+}
+
+.descripcion{
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+ul{
+    list-style-type: circle;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-whats{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-left: 50px;
+    margin-right: 20px ;
+}
+
+.numero{
+    margin-top: 45px;
+    font-size: 15px;
+}
+
+.columna-derecha{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start ;
+}
+
+#imagen1{
+    width: 180px;
+    margin-top: 15px;
+    margin-left: 100px;
+    border-radius: 10px;
+    border: 2px solid rgb(33, 31, 31);
+}
+
+.animate__animated.animate__rollIn {
+    --animate-duration: 7s;
+}
+
+#imagen2{
+    width: 180px;
+    margin-left: 390px;
+    margin-right: 80px;
+    border-radius: 10px;
+    border: 2px solid rgb(33, 31, 31);
+}
+
+.animate__animated.animate__jackInTheBox {
+    --animate-duration: 7s;
+}
+
+#imagen3{
+    width: 190px;
+    height: 190px;
+    margin-left: 90px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(33, 31, 31);
+}
+
+.animate__animated.animate__zoomInUp {
+    --animate-duration: 7s;
+}
+
+.btn-cambios{
+    color: rgb(228, 230, 232);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(215, 128, 96);
+    width: 100px;
+    height: 100px;
+    margin-left: 150px;
+    margin-right: 50px;
+    border: 1px solid rgb(30, 29, 29);
+    border-radius: 20px;
+    box-shadow: 5px 5px 7px rgb(90, 29, 29);
+}
+
+.btn-sitio{
+    color: rgb(228, 230, 232);
+    background-color: rgb(184, 83, 46);
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid rgb(33, 32, 32);
+    border-radius: 20px;
+    margin-right: 650px;
+    margin-bottom: 50px;
+    padding: 10px;
+    box-shadow: 5px 5px 7px rgb(90, 29, 29);
+}
+
+.btn-borrar{
+    background-color: rgb(193, 28, 28);
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    height: 50px;
+    border: 1px solid rgb(54, 52, 52);
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 5px 5px 7px rgb(123, 31, 44);
+}
+}
+
+
+

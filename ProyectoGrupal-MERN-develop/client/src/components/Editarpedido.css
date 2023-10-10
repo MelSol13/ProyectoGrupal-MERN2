@@ -1,0 +1,41 @@
+.pedido-edit {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 35px; 
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 200px;
+
+}
+.fondo4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background-image: url("https://img.freepik.com/free-vector/purple-fluid-background-frame_53876-99020.jpg?w=740&t=st=1696766043~exp=1696766643~hmac=f8d2eae8606420028e33d4246a9a9c896e44d635ed49e2a0ea4b560075074810");
+    background-size: cover;
+    opacity: 0.8;
+    z-index: -1;
+    background-color: rgba(8, 96, 131, 0.9);
+}
+
+.nav-editar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(226, 200, 230);
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: 70px;
+    width: auto; 
+    height: auto;
+    margin-left: 200px;
+  }
+  
+  .form-group2 {
+    margin-left: 5px;
+    font-size: 20px; 
+   
+     margin-top: 35px;
+}
