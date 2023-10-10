@@ -1,13 +1,12 @@
 .container-2{
-    width: 1880px;
-    height: 1800px;
+    width: 100vw;
     background-image: url(https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGZvbmRvJTIwYWJzdHJhY3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
-    background-size: 1900px 1800px;
+    background-size: 100vw;
     background-repeat: no-repeat;
 }
 
 .form{
-    margin-left: 300px;
+    padding-left: 300px;
     display: flex;
     flex-direction: row;
     gap: 10%;
@@ -28,11 +27,8 @@
 
 .titulo{
     color:  rgba(18, 111, 125, 0.944);
-    display: flex;
-    flex-direction: column;
-    margin-left: 450px;
+    padding-left: 450px;
     margin-top: 30px;
-    margin-bottom: 40px;
 }
 
 .btn-vista{

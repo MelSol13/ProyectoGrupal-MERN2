@@ -48,7 +48,7 @@ const VistaSitio = () => {
             <div className='fondo' style={{ background: `${sitio.colorFondo}` }}>
                 <div className='barraSuperior' style={{ background: `${sitio.colorBarra}` }}>
                     <p className='sitioNombre' style={{ fontFamily: `${sitio.fuenteSeleccionada}` }}>{sitio.nombre}</p>
-                    <img src={sitio.logo} className='logo' alt="logo"></img>
+                    <img src={sitio.logo} className='sitio-logo' alt="logo"></img>
                 </div>
                 <div className='body'>
                     <div className='columna-izquierda' style={{ background: `${sitio.colorInformacion}` }}>
