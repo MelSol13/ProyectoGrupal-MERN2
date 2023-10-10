@@ -16,8 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 9px 10px rgba(25, 80, 90, 0.795);
   margin-left: 250px;
   width: auto;
   height: auto;
@@ -104,7 +103,7 @@
   font-size: 20px;
   background-color: rgb(217, 238, 234);
   border: none;
-  margin-top: 25px;
+  margin-top: 20px;
 
 }
 
@@ -166,10 +165,9 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 15px;
-  width: 90px;
-  text-decoration: none;
-  text-decoration: none;
+  font-size: 18px;
+  width: 110px;
+  
 }
 
 .btn-borrar:hover {

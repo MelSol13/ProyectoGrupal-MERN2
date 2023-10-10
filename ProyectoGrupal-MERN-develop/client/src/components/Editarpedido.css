@@ -17,7 +17,7 @@
     background-size: cover;
     opacity: 0.8;
     z-index: -1;
-    background-color: rgba(8, 96, 131, 0.9);
+    background-color: rgba(11, 108, 146, 0.9);
 }
 
 .nav-editar {
@@ -25,7 +25,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 10px rgba(96, 14, 107, 0.753);
     margin-left: 70px;
     width: auto;
     height: auto;
@@ -42,7 +42,7 @@
 
     font-weight: bold;
     margin-bottom: 10px;
-    margin-left: 50px;
+    margin-left: 35px;
     margin-top: 30px;
     background-color: rgb(62, 161, 123);
     padding: 10px;
