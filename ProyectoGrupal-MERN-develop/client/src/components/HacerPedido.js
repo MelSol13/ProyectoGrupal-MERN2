@@ -10,7 +10,6 @@ const HacerPedido = () => {
 
     const { id } = useParams();
     const [pedido, setPedido] = useState({});
-    const [sitio, setSitio] = useState({});
     const [producto, setProducto] = useState('');
     const [cantidad, setCantidad] = useState('');
     const [imagen, setImagen] = useState('');

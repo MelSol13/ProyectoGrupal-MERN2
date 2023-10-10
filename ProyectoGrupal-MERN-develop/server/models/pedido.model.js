@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const EsquemaPedido = new mongoose.Schema({
     producto: {
         type: String,
-        required:["Producto requerido"],
+        required:[true,"Producto requerido"],
     },
     cantidad: {
     type: Number,
-    required:["Cantidad requerida"],
+    required:[true,"Cantidad requerida"],
     },
     imagen:{
         type: String,
@@ -17,11 +17,11 @@ const EsquemaPedido = new mongoose.Schema({
     },
     fecha:{
         type:String,
-        required:["Fecha requerida"],
+        required:[true,"Fecha requerida"],
     },
     hora:{
         type: String,
-        required:["Hora requerida"],
+        required:[true,"Hora requerida"],
     }  
 }, {timestamps:true, versionKey:false});
 
