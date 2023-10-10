@@ -17,10 +17,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(155, 226, 212);
-    padding: 10px 20px;
+    
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-left: 70px;
+    margin-left: 250px;
     width: auto; 
     height: auto;
   }
@@ -31,11 +30,6 @@
     height: auto; 
   }
   
-  .pedido-tit {
-    font-size: 35px; 
-    font-weight: 'bold';
-    font-style: italic;
-  }
   
   .log-out {
     padding: 5px 10px;
@@ -44,7 +38,7 @@
     border: none; 
     border-radius: 5px; 
     cursor: pointer; 
-    font-size: 16px; 
+    font-size: 20px; 
   }
   
   .log-out:hover {
@@ -52,18 +46,23 @@
   }
   
 .pedido-tit2 {
-    padding-left: 420px;
-    margin-top: 30px;
-    font-size: 30px; 
-    font-weight: bold;
-    font-style: italic;
+  margin-right: 15px;
+  margin-top: 30px;
+  font-size: 45px;
+  font-weight: bold;
+  font-style: normal;
+  color: rgb(5, 126, 126);
+  
 
 }
 
+.buscar{
+  font-size: 20px; 
+}
 .form-group1 {
     margin-left: 5px;
     font-size: 20px; 
-     
+     margin-top: 50px;
 }
 .btn-vista{
     
@@ -99,7 +98,7 @@
 .card{
     margin-left: 300px;
     font-size: 20px; 
-    background-color: rgb(244, 207, 245);
+    background-color: rgb(217, 238, 234);
     border: none;
     margin-top: 25px;
 
