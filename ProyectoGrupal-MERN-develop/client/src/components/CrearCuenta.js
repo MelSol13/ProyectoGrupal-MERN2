@@ -28,7 +28,7 @@ function CrearCuenta() {
             confirmPassword,
             type
         })
-            .then(res => res.data.type == 0, navigate("/hacerpedido"))
+            .then(res => res.data.type === 0, navigate("/iniciar-sesion"))
             .catch(err => setErrors(err.response.data.errors));
     }
 

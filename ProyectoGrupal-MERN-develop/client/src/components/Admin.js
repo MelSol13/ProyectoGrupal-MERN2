@@ -137,7 +137,7 @@ const Admin = () => {
                 <tr key={index}>
                   <td>{sitio.nombre}</td>
                   <td>
-                    <img src={sitio.imagen1} alt="autor" className="img-fluid" />
+                    <img className="img-admin" src={sitio.imagen1} alt="autor"  />
                   </td>
 
                   <td>

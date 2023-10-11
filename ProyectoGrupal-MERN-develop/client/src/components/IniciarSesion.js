@@ -22,8 +22,8 @@ function IniciarSesion() {
                 if (res.data.error) {
                     setErrorsLogin(res.data.message);
                 } else {
-                    if (res.data.type == 0) {
-                        navigate("/hacerpedido")
+                    if (res.data.type === 0) {
+                        navigate("/admin")
                     }
                     else {
                         // Pasa el nombre y apellidos del usuario al navegar a CrearSitio.js
