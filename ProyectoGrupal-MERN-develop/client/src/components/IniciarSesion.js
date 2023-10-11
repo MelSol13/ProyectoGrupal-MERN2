@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { UserName} from "./globals";
+import { UserName } from "./globals";
 import "./IniciarSesion.css"
 
 function IniciarSesion() {
@@ -22,11 +22,15 @@ function IniciarSesion() {
                 if (res.data.error) {
                     setErrorsLogin(res.data.message);
                 } else {
-                   
-                    // Pasa el nombre y apellidos del usuario al navegar a CrearSitio.js
-                    navigate("/crearsitio", { state: { userName: res.data.userName, userLastName: res.data.lastName } });
-                    const userName = res.data.userName; 
-                    UserName = userName;
+                    if (res.data.type == 0) {
+                        navigate("/hacerpedido")
+                    }
+                    else {
+                        // Pasa el nombre y apellidos del usuario al navegar a CrearSitio.js
+                        navigate("/crearsitio", { state: { userName: res.data.userName, userLastName: res.data.lastName } });
+                        const userName = res.data.userName;
+                        UserName = userName;
+                    }
                 }
             })
             .catch(err => console.log(err));
@@ -45,9 +49,6 @@ function IniciarSesion() {
                     <div>
                         <label htmlFor="passwordLogin">Contraseña:</label>
                         <input type="password" id="passwordLogin" className="form-control mb-3" value={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} />
-                    </div>
-                    <div>
-                        {errorsLogin !== "" ? <span className='text-danger'>{errorsLogin}</span> : null}
                     </div>
                     <input type="submit" value="Iniciar Sesión" className='bot-inic' />
                 </form>

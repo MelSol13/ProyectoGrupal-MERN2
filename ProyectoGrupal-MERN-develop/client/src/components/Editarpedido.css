@@ -1,41 +1,61 @@
-.pedido-edit {
-    margin-bottom: 20px;
-    margin-top: 20px;
-    font-size: 35px; 
-    font-weight: bold;
+.pedido-tit {
+    margin-left: 50px;
+    margin-right: 200px;
+    font-size: 46px;
+    font-weight: 'bold';
     font-style: italic;
-    margin-left: 200px;
-
+    color: rgb(177, 28, 157);
 }
+
 .fondo4 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     background-image: url("https://img.freepik.com/free-vector/purple-fluid-background-frame_53876-99020.jpg?w=740&t=st=1696766043~exp=1696766643~hmac=f8d2eae8606420028e33d4246a9a9c896e44d635ed49e2a0ea4b560075074810");
     background-size: cover;
     opacity: 0.8;
     z-index: -1;
-    background-color: rgba(8, 96, 131, 0.9);
+    background-color: rgba(11, 108, 146, 0.9);
 }
 
-.nav-editar{
+.nav-editar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(226, 200, 230);
     padding: 10px 20px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 10px rgba(96, 14, 107, 0.753);
     margin-left: 70px;
-    width: auto; 
+    width: auto;
     height: auto;
-    margin-left: 200px;
-  }
-  
-  .form-group2 {
-    margin-left: 5px;
-    font-size: 20px; 
-   
-     margin-top: 35px;
+    margin-left: 250px;
+}
+
+.form-group2 {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: 35px;
+}
+
+.btn-vista2 {
+
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    margin-top: 30px;
+    background-color: rgb(62, 161, 123);
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    width: 270px;
+    height: 70px;
+
+}
+
+.btn-vista2:hover {
+    background-color: #1e169b;
 }

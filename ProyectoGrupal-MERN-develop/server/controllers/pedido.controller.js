@@ -15,7 +15,9 @@ module.exports.ver_pedido = (req, res) =>{
 module.exports.crear_pedido = (req, res) => {
     Pedido.create(req.body)
     .then(pedido => res.json(pedido))
-    .catch(err => res.json({message:"Hubo un error"+err}));
+    .catch(err => {
+        res.status(400).json(err)
+    });
 }
 
 module.exports.editar_pedido = (req, res) => {

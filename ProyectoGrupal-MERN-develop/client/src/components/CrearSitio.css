@@ -1,13 +1,12 @@
 .container-2{
-    width: 1880px;
-    height: 1800px;
+    width: 100vw;
     background-image: url(https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGZvbmRvJTIwYWJzdHJhY3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
-    background-size: 1900px 1800px;
+    background-size: 100vw;
     background-repeat: no-repeat;
 }
 
 .form{
-    margin-left: 300px;
+    padding-left: 300px;
     display: flex;
     flex-direction: row;
     gap: 10%;
@@ -28,14 +27,11 @@
 
 .titulo{
     color:  rgba(18, 111, 125, 0.944);
-    display: flex;
-    flex-direction: column;
-    margin-left: 450px;
+    padding-left: 450px;
     margin-top: 30px;
-    margin-bottom: 40px;
 }
 
-.btn-vista{
+.btn-vista1{
     color:rgba(29, 10, 10, 0.685);
     font-weight: bold;
     font-size: 20px;
@@ -43,11 +39,15 @@
     background-color: rgb(209, 86, 115);
     margin-top: 50px;
     margin-left: 50px;
-    width: 150px;
+    width: 200px;
     height: 50px;
     border-radius: 10px;
-    box-shadow: 5px 5px 7px rgb(88, 17, 62);
+    box-shadow: 5px 5px 7px rgb(216, 89, 169);
 }
+
+  .btn-vista1:hover {
+  background-color: #e631e6;
+  }
 
 .titulo-colores1{
     font-size: 40px;
