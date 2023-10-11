@@ -1,0 +1,170 @@
+.nav-link {
+    font: oblique bold 150% cursive;
+    background-image: 'url("https://www.todofondos.net/wp-content/uploads/fondos-de-flores-vintage-exzx9q1-0.42-mb-4usky.-wallpaper-de-flores-vintage.jpg")';
+  }
+
+ .navStyle1{
+    background-image: 'url("https://www.todofondos.net/wp-content/uploads/fondos-de-flores-vintage-exzx9q1-0.42-mb-4usky.-wallpaper-de-flores-vintage.jpg")', 
+ } 
+
+.navbar{
+   width: 1500px;
+   margin-left: 1;
+}
+
+.todos-container{
+   width: 1500px;
+   margin-left: 1;
+   font-family: "DynaPuff", cursive;
+}
+
+.navbar1{
+   background-color:white;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+}
+  
+
+.header {
+
+   width: 1500px;
+   margin-left: 1;
+
+ }
+ 
+ .containerper{
+   width: 1500px;
+   margin-left: 1;
+
+ }
+
+.containe{
+   background-color:white;
+   width: 1500px;
+   margin-left: 1; width: 100px;
+   /* height: 1400; */
+   
+}
+
+.center{
+
+      display: flex;
+      justify-content: center; /* Centra horizontalmente */
+      align-items: center; /* Centra verticalmente */
+      height: 10vh; /* Ajusta la altura según tus necesidades */
+      padding-left: 40%;
+    }
+    
+
+.con{
+   background-color: rgba(149, 217, 218, 0.999);
+   width: 1900px;
+   text-align: center;
+   display: flex;
+
+}
+
+.collapse{
+   background-color:white;
+   width: 100px;
+   /* height: 1400; */
+}
+
+.content{
+   background-color:rgb(149, 225, 246);
+   width: 100px;
+   
+   /* height: 1400; */
+}
+
+.conta{
+background-color:rgb(237, 241, 243);
+   width: 0px;
+   /* height: 1400; */
+}
+
+.navbar-bran{
+   background-color:rgb(237, 241, 243);
+   width: 100px;
+   /* height: 1400; */
+   
+}
+
+#root {
+   /*background-color:rgb(237, 241, 243);*/
+   width: 100%;
+   height: 100%;
+   
+ }
+ 
+ .typography-1 {
+   font-family: "DynaPuff", cursive;
+ }
+ .typography-2 {
+   font-family: "Permanent Marker", cursive;
+ }
+
+ .row {
+   /*background-color:rgb(237, 241, 243);*/
+   width: 100%;
+   /*height: 100%;*/
+ }
+
+
+
+.container position-relative{
+   width: 100%; 
+   display: flex;
+   justify-content: space-between;
+
+}
+
+.container4{
+   width: 100%; 
+   display: flex;
+   justify-content: space-between;
+   background-color: rgba(149, 217, 218, 0.999);
+   width: 1900px;
+   text-align: center;
+   display: flex;
+}
+.masthead{
+   background-color: rgba(149, 217, 218, 0.999);
+   width: 1900px;
+   text-align: center;
+   display: flex;
+}
+
+a {
+   margin-right: 10px;
+ }
+ 
+ .lista-correos a {
+   margin-right: 10px; 
+ }
+
+ .rowa{
+   width: 1900px;
+   text-align: center;
+   display: flex;
+ }
+ 
+
+.fondo3 {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-abstract-watercolor-background_23-2149012404.jpg?w=740&t=st=1696730676~exp=1696731276~hmac=198bcb7b27a066f11fa63ede04024518bbd65048ac086ad93cb49f7429f1017a");
+   background-size: cover;
+   opacity: 0.8;
+   z-index: -1;
+   background-color: rgba(149, 217, 218, 0.999);
+ }
+
+ .contai{
+   background-color: rgba(149, 217, 218, 0.999);
+ }
