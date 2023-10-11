@@ -9,6 +9,7 @@ function CrearCuenta() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [type, setType] = useState("");
 
     const [errors, setErrors] = useState({});
 
@@ -24,9 +25,10 @@ function CrearCuenta() {
             lastName,
             email,
             password,
-            confirmPassword
+            confirmPassword,
+            type
         })
-            .then(res => navigate("/crearsitio"))
+            .then(res => res.data.type == 0, navigate("/hacerpedido"))
             .catch(err => setErrors(err.response.data.errors));
     }
 
@@ -50,6 +52,14 @@ function CrearCuenta() {
                             <label htmlFor='email'>Email:</label>
                             <input type="email" name="email" id="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
                             {errors.email ? <span className='text-danger'>{errors.email.message}</span> : null}
+                        </div>
+                        <div className='form-group4'>
+                            <label>Tipo:</label>
+                            <select name="tipo" onChange={e => setType(e.target.value)} defaultValue={'DEFAULT'}>
+                                <option value="DEFAULT" disabled>Seleccione uno</option>
+                                <option value="0" >Cliente</option>
+                                <option value="1">Emprendedor</option>
+                            </select>
                         </div>
                         <div className='form-group'>
                             <label htmlFor='password'>Contraseña:</label>

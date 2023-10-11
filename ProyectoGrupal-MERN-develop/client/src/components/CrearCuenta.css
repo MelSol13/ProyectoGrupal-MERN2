@@ -34,3 +34,10 @@
 .link{
     margin-left: 10px;
 }
+
+.form-group4 select{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+}
