@@ -50,6 +50,9 @@ function IniciarSesion() {
                         <label htmlFor="passwordLogin">Contraseña:</label>
                         <input type="password" id="passwordLogin" className="form-control mb-3" value={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} />
                     </div>
+                    <div>
+                        {errorsLogin !== "" ? <span className='text-danger'>{errorsLogin}</span> : null}
+                    </div>
                     <input type="submit" value="Iniciar Sesión" className='bot-inic' />
                 </form>
             </div>

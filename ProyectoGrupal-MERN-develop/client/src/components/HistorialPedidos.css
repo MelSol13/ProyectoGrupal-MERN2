@@ -2,15 +2,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; 
-  height: 80vw; 
+  width: 100vw;
+  height: 80vw;
   background-image: url("https://img.freepik.com/premium-vector/watercolor-abstract-background_23-2149147672.jpg?w=740");
   background-size: cover;
   opacity: 0.8;
   z-index: -1;
   background-color: rgba(8, 96, 131, 0.9);
 }
-.nav-historial{
+
+.nav-historial {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -21,25 +22,25 @@
   margin-top: 15px;
 }
 
-.hist-tit{
+.hist-tit {
   margin-left: 50px;
   margin-right: 200px;
-  font-size: 46px; 
+  font-size: 46px;
   font-weight: 'bold';
   font-style: italic;
   color: rgb(19, 50, 136);
   font-weight: 'bold';
 }
 
-.log-out2{
+.log-out2 {
   margin-left: 50px;
   padding: 5px 10px;
-  background-color: #f00; 
-  color: #fff; 
-  border: none; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  font-size: 20px; 
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
   font-weight: 'bold';
 }
 
@@ -47,41 +48,48 @@
   background-color: #d755ff;
 }
 
-.btn-success{
-  cursor: pointer; 
-  font-size: 20px; 
-  background-color: rgba(55, 7, 168, 0.89); 
-  color: #fff; 
-  border: none; 
-  border-radius: 5px; 
+.btn-success {
+  cursor: pointer;
+  font-size: 20px;
+  background-color: rgba(55, 7, 168, 0.89);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   font-weight: 'bold';
 
 }
+
 .btn-success:hover {
   background-color: #e06830;
 }
 
-.table-hover{
+.table-hover {
   margin-left: 140px;
   margin-top: 15px;
   font-size: 20px;
- 
+
 }
 
-.btn-warning{
+.btn-warning {
   font-size: 20px;
   font-weight: 'bold';
   background-color: #37ca8d;
   border: #0e6d45;
   padding: 10px;
-  
-  
+
+
 
 }
-.btn-danger{
+
+.btn-danger {
   font-size: 20px;
   font-weight: 'bold';
   padding: 9px;
   background-color: #5746f3;
   border: #4d37ca;
+}
+
+.img-historial {
+  width: 200px;
+  height: 200px;
 }
