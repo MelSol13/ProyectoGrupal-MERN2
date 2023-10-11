@@ -1,5 +1,4 @@
 import{Routes, Route} from "react-router-dom";
-import Contact from "./components/Contact";
 import Principal from "./components/Principal";
 import CrearCuenta from "./components/CrearCuenta";
 import IniciarSesion from "./components/IniciarSesion";
@@ -18,7 +17,6 @@ const App = () =>{
       <Routes>
         <Route path="/" exact element={<Principal/>} />
         <Route path="/admin" exact element={<Admin/>} />
-        <Route path="/contact" exact element={<Contact/>} />
         <Route path="/crearcuenta" element={<CrearCuenta/>}/>
         <Route path="/iniciar-sesion" element={<IniciarSesion/>}/>
         <Route path="/crearsitio" element={<CrearSitio/>}/>

@@ -64,12 +64,6 @@ const CrearSitio = () => {
             });
     }
 
-
-    const ir = (id) => {
-        axios.delete("http://localhost:8000/api/sitios/", { withCredentials: true })
-            .then(res => navigate("/admin"))
-            .catch(err => console.log(err));
-    }
     const opcionesCategorias = [
         { value: 'pasteleria', label: 'Pastelería' },
         { value: 'unas', label: 'Uñas' },
@@ -94,14 +88,12 @@ const CrearSitio = () => {
                 <div className="user-actions" style={{ textAlign: "right", color: 'teal', fontSize: '22px', fontWeight: 'bold', padding: "10px 25px" }}>
                     <span className='username'>{state?.userName}</span>
                     <ButtonLogout />
-                </div>  
+                </div>
             </nav>
-            
             <img src={imagen} id='imagen-princ' className='animate__animated animate__jello' alt="Imagen predeterminada" />
             <div className='row'>
                 <h1 className='titulo'>Diseña a tu gusto</h1>
                 <form className='form' onSubmit={guardarSitio}>
-                    
                     <div className='col-md-4'>
                         <div className='form-group'>
                             <label>Nombre del sitio:</label>
@@ -187,7 +179,6 @@ const CrearSitio = () => {
                             </svg>
                                 Vista Previa
                             </button>
-                           
                         </div>
                     </div>
                 </form>
