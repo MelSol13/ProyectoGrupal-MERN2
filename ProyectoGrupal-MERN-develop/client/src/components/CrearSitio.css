@@ -1,5 +1,6 @@
 .container-2{
-    width: 100vw;
+    width: 160%;
+    height: 120%;
     background-image: url(https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGZvbmRvJTIwYWJzdHJhY3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
     background-size: cover;
     background-repeat: no-repeat;
