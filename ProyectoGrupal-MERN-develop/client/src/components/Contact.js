@@ -170,9 +170,9 @@ const Contant = () => {
                 Volver a la Principal
               </Link>
             </ul>
-           
+
           </div>
-          
+
         </section>
       </div>
 

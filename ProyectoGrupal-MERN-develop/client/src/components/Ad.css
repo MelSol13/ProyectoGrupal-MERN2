@@ -64,7 +64,7 @@
 
 .con {
    background-color: rgba(149, 217, 218, 0.999);
-   width: 1900px;
+   width: 100vw;
    text-align: center;
    display: flex;
 

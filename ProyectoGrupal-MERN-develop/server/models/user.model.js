@@ -27,7 +27,7 @@ const EsquemaUsuario = new mongoose.Schema({
     },
     type:{
         type: Boolean,
-        default: true
+        default: true//emprendedor
     }
 }, { timestamps: true, versionKey: false })
 

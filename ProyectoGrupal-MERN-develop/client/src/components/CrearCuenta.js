@@ -55,10 +55,10 @@ function CrearCuenta() {
                         </div>
                         <div className='form-group4'>
                             <label>Tipo:</label>
-                            <select name="tipo" onChange={e => setType(e.target.value)} defaultValue={'DEFAULT'}>
+                            <select name="type" onChange={e => setType(e.target.value)} defaultValue={'DEFAULT'}>
                                 <option value="DEFAULT" disabled>Seleccione uno</option>
-                                <option value="0" >Cliente</option>
-                                <option value="1">Emprendedor</option>
+                                <option value= "true" >Cliente</option>
+                                <option value="false" >Emprendedor</option>
                             </select>
                         </div>
                         <div className='form-group'>

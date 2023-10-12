@@ -21,18 +21,16 @@ function IniciarSesion() {
                 console.log(res);
                 if (res.data.error) {
                     setErrorsLogin(res.data.message);
-                } else {
-                    if (res.data.type === 0) {
+                } else if (res.data.type == 0) {
                         navigate("/admin")
-                    }
-                    else {
+                } else {
                         // Pasa el nombre y apellidos del usuario al navegar a CrearSitio.js
                         navigate("/crearsitio", { state: { userName: res.data.userName, userLastName: res.data.lastName } });
                         const userName = res.data.userName;
                         UserName = userName;
                     }
                 }
-            })
+            )
             .catch(err => console.log(err));
     }
 
