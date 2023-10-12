@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import cart from "../images/fon.jpg";
 import Logo from "../images/cart.gif";
 import img1 from "../images/img1.png";
@@ -19,6 +20,7 @@ const Contant = () => {
     <>
       {/* Masthead*/}
       <header className="masthead" id="contact">
+
         <div className="container4">
           <div className="row justify-content-center">
             <div className="col-xl-6">
@@ -164,10 +166,13 @@ const Contant = () => {
               <li className="list-inline-item">
                 <img src={img4} alt="Mi Icono" />
               </li>
-
-
+              <Link to="/" className="btn btn-primary" style={{ marginLeft: "515px", clear: "both", fontWeight: 'bold', fontSize: '19px', marginTop: '40px' }}>
+                Volver a la Principal
+              </Link>
             </ul>
+           
           </div>
+          
         </section>
       </div>
 

@@ -149,14 +149,14 @@
         align-items: center;
     }
 
-    .btn-cambios{
+    #btn-guardar{
         display: flex;
         align-items: center;
-        color: rgb(228, 230, 232);
+        color: rgb(29, 119, 119);
         font-size: 25px;
         font-weight: bold;
         padding: 10px;
-        background-color: rgb(215, 128, 96);
+        background-color: rgb(16, 184, 156);
         width: 300px;
         height: 100px;
         margin-left: 30px;
@@ -166,13 +166,13 @@
         margin-bottom: 50px;
     }
     
-    .btn-sitio{
+    .btn-cambios{
         display: flex;
         align-items: center;
         width: 300px;
         height: 100px;
         color: rgb(228, 230, 232);
-        background-color: rgb(184, 83, 46);
+        background-color: rgb(46, 94, 184);
         font-size: 25px;
         font-weight: bold;
         border: 1px solid rgb(33, 32, 32);
@@ -576,17 +576,21 @@ ul{
     box-shadow: 5px 5px 7px rgb(90, 29, 29);
 }
 
-.btn-sitio{
-    color: rgb(228, 230, 232);
-    background-color: rgb(184, 83, 46);
-    font-size: 20px;
+.btn-guardar{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
-    border: 1px solid rgb(33, 32, 32);
-    border-radius: 20px;
-    margin-right: 650px;
-    margin-bottom: 50px;
     padding: 10px;
-    box-shadow: 5px 5px 7px rgb(90, 29, 29);
+    background-color: rgb(55, 223, 186);
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-right: 40px;
+    border: 1px solid rgb(30, 29, 29);
+    border-radius: 20px;
+    margin-bottom: 50px;
 }
 
 .btn-borrar{
