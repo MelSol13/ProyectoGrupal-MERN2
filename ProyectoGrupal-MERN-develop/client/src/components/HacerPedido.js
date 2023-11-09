@@ -151,7 +151,7 @@ const HacerPedido = () => {
                         <p>Comentarios:{state.comentarios}</p>
                         <p>Fecha de Retiro:{state.fecha}</p>
                         <p>Hora de Retiro:{state.hora}</p>
-                        <img id="imagen-pedido" className="img" src={state.imagen} alt="imagen referencia"></img>
+                        <img id="imagen-pedido" className="img" src={state.imagen} ></img>
                     </div> :
 
                     <div className='card1'>
@@ -161,7 +161,7 @@ const HacerPedido = () => {
                         <p>Comentarios:{pedido.comentarios}</p>
                         <p>Fecha de Retiro:{pedido.fecha}</p>
                         <p>Hora de Retiro:{pedido.hora}</p>
-                        <img id="imagen-pedido" className="img" src={pedido.imagen} alt="imagen referencia"></img>
+                        <p>Imagen de Referencia:</p><img id="imagen-pedido" className="img" src={pedido.imagen} ></img>
                     </div>
             }
             <div>
