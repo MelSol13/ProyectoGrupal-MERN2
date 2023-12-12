@@ -4,8 +4,6 @@ import { useNavigate, useParams, Link, useLocation } from "react-router-dom";
 import { UserName } from "./globals";
 import "./HacerPedido.css"
 
-
-
 const HacerPedido = () => {
 
     const { id } = useParams();
@@ -122,12 +120,12 @@ const HacerPedido = () => {
                             </div>
                             <div className='form-group'>
                                 <label>Fecha De Retiro:</label>
-                                <textarea className="form-control" value={fecha} onChange={(e) => setFecha(e.target.value)} />
+                                <input type="date" className="form-control" value={fecha} onChange={(e) => setFecha(e.target.value)} />
                                 {errores.fecha ? <span className='text-danger'>{errores.fecha.message}</span> : null}
                             </div>
                             <div className='form-group'>
                                 <label>Hora De Retiro:</label>
-                                <textarea className="form-control" value={hora} onChange={(e) => setHora(e.target.value)} />
+                                <input type="time" className="form-control" value={hora} onChange={(e) => setHora(e.target.value)} />
                                 {errores.hora ? <span className='text-danger'>{errores.hora.message}</span> : null}
                             </div>
                         </div>

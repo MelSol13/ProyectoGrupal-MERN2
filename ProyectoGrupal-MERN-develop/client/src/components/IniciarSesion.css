@@ -2,7 +2,7 @@
     width: 100vw;
     height: 50vw;
     padding-top: 80px;
-    background: url(https://img.freepik.com/free-photo/abstract-coral-orange-color-background_53876-104720.jpg?w=1380&t=st=1696285120~exp=1696285720~hmac=60fcaced293f22de941c7a97448a39c85d2ad49e8368e2b3e6a9743fb13cb788);
+    background: url("https://s0.smartresize.com/wallpaper/737/463/HD-wallpaper-abstract-pink-patterned-background-vector-premium-nunny-vector-background-pattern-abstract-background-background-patterns-peach-abstract.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -14,6 +14,7 @@
 }
 
 .inic-tit{
+    margin-top: 200px;
     color: rgb(210, 106, 68);
     font-family: Cochin;
 }

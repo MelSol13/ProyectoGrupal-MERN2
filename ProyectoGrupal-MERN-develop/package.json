@@ -24,6 +24,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.5.4",
     "react": "^18.2.0",
+    "react-calendar": "^4.7.0",
+    "react-datepicker": "^4.24.0",
     "react-dom": "^18.2.0",
     "react-time-picker": "^6.5.2"
   }
