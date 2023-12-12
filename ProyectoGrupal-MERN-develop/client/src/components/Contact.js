@@ -10,6 +10,11 @@ import img5 from "../images/img5.png";
 import img6 from "../images/img6.png";
 import img7 from "../images/img7.png";
 import img8 from "../images/img8.png";
+import imghellen from "../images/imghellen.jpeg";
+import imgmelissa from "../images/imgmelissa.jpeg";
+import imgpatricia from "../images/imgpatricia.jpeg";
+import imghillary from "../images/imghillary.jpg";
+import imgmariliny from "../images/imgmariliny.jpeg";
 import "./Ad.css";
 
 const Contant = () => {
@@ -72,6 +77,25 @@ const Contant = () => {
                 <a className="lista-correos " href="mailto:name@email.com">
                   m.solanof13@gmail.com
                 </a>
+
+                <ul className=" list-group list-group-horizontal list-unstyled ">
+                  <li>
+                  <a href="https://www.linkedin.com/in/hellen-camacho-2997b31b4/"><img className="rounded-circle" src={imghellen} width="80" height="80" alt="imghellen"/></a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/melissa-solano-webdeveloper-fullstackmern-front-end-back-end-javascript-bootstrap-html-css/"><img className="rounded-circle" src={imgmelissa} width="80" height="80" alt="imgmelissa"/></a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/patricia-s-m-960232100/"><img className="rounded-circle" src={imgpatricia} width="80" height="80" alt="imgpatricia"/></a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/hillary-diaz-saborio-480724167/"><img className="rounded-circle" src={imghillary} width="80" height="80" alt="imghillary"/></a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/mariliny-zambrana-jim%C3%A9nez-608b34236/"><img className="rounded-circle" src={imgmariliny} width="80" height="80" alt="imgmariliny"/></a>
+                  </li>
+                </ul>
+                
 
                 <p className="lead my-5">
                   We are an self-taught students, we like to be constantly learning
