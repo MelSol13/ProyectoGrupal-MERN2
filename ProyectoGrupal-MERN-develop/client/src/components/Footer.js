@@ -18,13 +18,13 @@ const Footer = () => {
             </p>
           </div>
           <div className="foo">
-            <img
+            <a href="http://localhost:3000/contact"><img
               src={Avatar}
               alt="Avatar"
               className="rounded-circle ms-3 align-middle"
               width="42"
               height="40"
-            ></img>
+            ></img></a>
           </div>
         </div>
       </div>
