@@ -83,7 +83,6 @@ const ActualizarPedido = () => {
                             <label>Producto:</label>
                             <input type="text" name="producto" className="form-control" value={producto} onChange={e => setProducto(e.target.value)} />
                             {errores.producto ? <span className='text-danger'>{errores.producto.message}</span> : null}
-                       
                         <div>
                             <label>Cantidad:</label>
                             <input type="text" name="cantidad" className="form-control" value={cantidad} onChange={e => setCantidad(e.target.value)} />
@@ -100,12 +99,12 @@ const ActualizarPedido = () => {
                         </div>
                         <div className='form-group'>
                             <label>Fecha De Retiro:</label>
-                            <textarea className="form-control" value={fecha} onChange={(e) => setFecha(e.target.value)} />
+                            <input type="date" className="form-control" value={fecha} onChange={(e) => setFecha(e.target.value)} />
                             {errores.fecha ? <span className='text-danger'>{errores.fecha.message}</span> : null}
                         </div>
                         <div className='form-group'>
                             <label>Hora De Retiro:</label>
-                            <textarea className="form-control" value={hora} onChange={(e) => setHora(e.target.value)} />
+                            <input type="time" className="form-control" value={hora} onChange={(e) => setHora(e.target.value)} />
                             {errores.hora ? <span className='text-danger'>{errores.hora.message}</span> : null}
                         </div>
                         <div>
