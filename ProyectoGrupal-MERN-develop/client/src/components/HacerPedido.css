@@ -116,8 +116,13 @@
   font-style: italic;
   margin-top: 25px;
   margin-bottom: 10px;
+}
 
-
+.carrito{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .card1 {

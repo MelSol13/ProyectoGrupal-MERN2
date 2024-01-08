@@ -37,22 +37,22 @@ const Header = () => {
                 aria-current="page"
                 to="/admin"
               >
-                
+
                 <span className="d-md-none">Diseños</span>
                 <span className="d-lg-block">Diseños disponibles</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/">
-             
-             
+
+
                 <span className="d-md-none">Home</span>
                 <span className="d-lg-block">Inicio</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/iniciar-sesion">
-               
+
                 <span className="d-md-none">LogIn</span>
                 <span className="d-lg-block">Iniciar Sesión</span>
               </Link>
