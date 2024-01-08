@@ -50,6 +50,7 @@ const HistorialPedidos = () => {
             <table className="table table-hover">
                 <thead>
                     <tr>
+                        <th>Emprendimiento</th>
                         <th>Producto</th>
                         <th>Cantidad</th>
                         <th>Comentarios</th>
@@ -61,6 +62,7 @@ const HistorialPedidos = () => {
                     {
                         pedidos.map((pedido, index) => (
                             <tr key={index}>
+                                <td>{pedido.emprendimiento}</td>
                                 <td>{pedido.producto}</td>
                                 <td>{pedido.cantidad}</td>
                                 <td>{pedido.comentarios}</td>

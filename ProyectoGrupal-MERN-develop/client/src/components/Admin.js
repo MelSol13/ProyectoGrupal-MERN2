@@ -109,10 +109,7 @@ const Admin = () => {
 
           </nav>
 
-          <h1 style={titleStyle}>Diseños disponibles</h1>
-          <Link to="/crearsitio" className="btn btn-success">
-            Nueva Plantilla +
-          </Link>
+          <h1 style={titleStyle}>Empredimientos disponibles</h1>
           <div className="fondo3 text-center">
 
 
@@ -125,10 +122,10 @@ const Admin = () => {
 
           <thead>
             <tr>
-              <th>Diseño</th>
+              <th>Emprendimiento</th>
               <th>Imagen Ilustrativa</th>
 
-              <th>Acciones</th>
+              <th>Ver Sitio</th>
             </tr>
           </thead>
           <tbody>
@@ -141,18 +138,10 @@ const Admin = () => {
                   </td>
 
                   <td>
-                    <Link className='btn btn-warning' to={`/editarsitio/${sitio._id}`}>Editar</Link>
-                    <button className='btn btn-danger' onClick={() => eliminar(sitio._id)}>Eliminar</button>
                     <Link className='btn btn-success' to={`/vistaprevia/${sitio._id}`}><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="36" height="36" viewBox="0 0 24 24" stroke-width="2.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
                       <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
-                    </svg></Link><Link className='btn btn-info' to={`/historialpedidos/${sitio._id}`}> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-description" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                      <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                      <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-                      <path d="M9 17h6" />
-                      <path d="M9 13h6" />
                     </svg></Link>
                   </td>
                 </tr>

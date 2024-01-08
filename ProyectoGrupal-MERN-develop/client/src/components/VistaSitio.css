@@ -1,5 +1,5 @@
-@media(width <= 481px){
-    .fondo{
+@media(width <=481px) {
+    .fondo {
         border: 1px solid rgb(56, 55, 55);
         padding: 30px;
         margin-bottom: 30px;
@@ -7,40 +7,40 @@
         width: 725px;
         height: 2000px;
     }
-    
-    .barraSuperior{
+
+    .barraSuperior {
         display: flex;
         flex-direction: row;
         align-items: center;
         height: 300px;
         border: 1px solid gray;
         border-radius: 20px;
-        margin-bottom: 50px ;
+        margin-bottom: 50px;
         margin-top: 30px;
     }
-    
-    .sitioNombre{
+
+    .sitioNombre {
         font-size: 70px;
         font-weight: bold;
         display: flex;
         margin-right: 40px;
         margin-left: 40px;
     }
-    
-    .logo{
+
+    .logo {
         display: flex;
         width: 250px;
         margin-right: 50px;
         border-radius: 50%;
         border: 2px solid rgb(51, 48, 48);
     }
-    
-    .body{
+
+    .body {
         display: flex;
         flex-direction: row;
     }
-    
-    .columna-izquierda{
+
+    .columna-izquierda {
         color: ghostwhite;
         margin-top: 20px;
         border: 1px solid rgb(128, 128, 128);
@@ -49,10 +49,10 @@
         border-radius: 20px;
         padding: 10px;
         height: 1500px;
-        border: 2px solid rgb(31, 30, 30) ;
+        border: 2px solid rgb(31, 30, 30);
     }
-    
-    .eslogan{
+
+    .eslogan {
         color: rgb(235, 217, 217);
         display: flex;
         flex-direction: row;
@@ -63,48 +63,48 @@
         margin-bottom: 50px;
         -webkit-text-stroke: 0.5px rgb(47, 46, 44);
     }
-    
-    .descripcion{
+
+    .descripcion {
         font-size: 35px;
         margin-top: 40px;
         margin-left: 30px;
         margin-bottom: 50px;
     }
-    
-    ul{
+
+    ul {
         list-style-type: circle;
         font-size: 30px;
         margin-top: 30px;
         margin-left: 30px;
     }
 
-    .contacto{
+    .contacto {
         display: flex;
         flex-direction: row;
         text-align: center;
     }
-    
-    .logo-whats{
+
+    .logo-whats {
         width: 70px;
         border-radius: 50%;
         margin-top: 100px;
         margin-left: 5px;
-        margin-right: 20px ;
+        margin-right: 20px;
     }
-    
-    .numero{
+
+    .numero {
         margin-top: 105px;
         font-size: 25px;
     }
 
 
-    .columna-derecha{
+    .columna-derecha {
         margin-top: 5px;
         display: flex;
         flex-direction: column;
     }
-    
-    #imagen1{
+
+    #imagen1 {
         width: 320px;
         margin-top: 80px;
         margin-bottom: 100px;
@@ -116,20 +116,20 @@
     .animate__animated.animate__rollIn {
         --animate-duration: 7s;
     }
-    
-    #imagen2{
+
+    #imagen2 {
         width: 320px;
         margin-left: 30px;
         margin-right: 80px;
         border-radius: 30px;
         border: 4px solid rgb(33, 31, 31);
     }
-    
+
     .animate__animated.animate__jackInTheBox {
         --animate-duration: 7s;
     }
 
-    #imagen3{
+    #imagen3 {
         width: 320px;
         height: 340px;
         margin-left: 30px;
@@ -142,14 +142,14 @@
     .animate__animated.animate__zoomInUp {
         --animate-duration: 7s;
     }
-    
-    .botones{
+
+    .botones {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    #btn-guardar{
+    #btn-guardar {
         display: flex;
         align-items: center;
         color: rgb(29, 119, 119);
@@ -165,8 +165,8 @@
         border-radius: 20px;
         margin-bottom: 50px;
     }
-    
-    .btn-cambios{
+
+    .btn-cambios {
         display: flex;
         align-items: center;
         width: 300px;
@@ -181,8 +181,8 @@
         padding: 10px;
         margin-bottom: 50px;
     }
-    
-    .btn-borrar{
+
+    .btn-borrar {
         background-color: rgb(193, 28, 28);
         color: whitesmoke;
         font-size: 25px;
@@ -195,64 +195,66 @@
         margin-bottom: 50px;
     }
 
-    .btn-logout{
+    .btn-logout {
         background-color: rgb(232, 100, 18);
         color: whitesmoke;
         font-family: 'Trebuchet MS';
         font-size: 20px;
         border: 2px solid rgb(48, 46, 46);
         border-radius: 5px;
-        margin-left: 600px;
+        margin-left: 500px;
         margin-top: 20px;
         margin-bottom: 30px;
-        width:150px;
+        width: 150px;
         box-shadow: 5px 5px 7px rgb(150, 62, 25);
     }
+
+
 }
 
-@media (482px <= width <= 1023px){
-    .fondo{
+@media (482px <=width <=1023px) {
+    .fondo {
         border: 1px solid rgb(56, 55, 55);
         padding: 30px;
         margin-bottom: 30px;
         border-radius: 20px;
-        width:1300px;
+        width: 1300px;
         height: 2300px;
     }
-    
-    .barraSuperior{
+
+    .barraSuperior {
         display: flex;
         flex-direction: row;
         align-items: center;
         border: 1px solid gray;
         border-radius: 20px;
-        margin-bottom: 50px ;
+        margin-bottom: 50px;
         margin-top: 30px;
         height: 300px;
     }
-    
-    .sitioNombre{
+
+    .sitioNombre {
         font-size: 100px;
         font-weight: bold;
         display: flex;
         margin-right: 250px;
         margin-left: 40px;
     }
-    
-    .logo{
+
+    .logo {
         display: flex;
         width: 400px;
         margin-right: 50px;
         border-radius: 50%;
         border: 2px solid rgb(51, 48, 48);
     }
-    
-    .body{
+
+    .body {
         display: flex;
         flex-direction: row;
     }
-    
-    .columna-izquierda{
+
+    .columna-izquierda {
         color: ghostwhite;
         margin-top: 40px;
         border: 1px solid rgb(128, 128, 128);
@@ -260,11 +262,11 @@
         flex-direction: column;
         border-radius: 20px;
         height: 1750px;
-        border: 2px solid rgb(31, 30, 30) ;
+        border: 2px solid rgb(31, 30, 30);
         padding: 30px;
     }
-    
-    .eslogan{
+
+    .eslogan {
         color: rgb(235, 217, 217);
         display: flex;
         flex-direction: row;
@@ -275,50 +277,50 @@
         margin-bottom: 50px;
         -webkit-text-stroke: 0.5px rgb(47, 46, 44);
     }
-    
-    .descripcion{
+
+    .descripcion {
         font-size: 45px;
         margin-top: 80px;
         margin-left: 30px;
         margin-bottom: 80px;
     }
-    
-    ul{
+
+    ul {
         list-style-type: circle;
         font-size: 35px;
         margin-top: 70px;
         margin-left: 30px;
     }
 
-    .contacto{
+    .contacto {
         display: flex;
         flex-direction: row;
         text-align: center;
     }
-    
-    .logo-whats{
+
+    .logo-whats {
         width: 80px;
         border-radius: 50%;
         margin-top: 150px;
         margin-left: 50px;
-        margin-right: 20px ;
+        margin-right: 20px;
     }
-    
-    .numero{
+
+    .numero {
         margin-top: 150px;
         font-size: 35px;
     }
 
 
-    .columna-derecha{
+    .columna-derecha {
         margin-top: 20px;
         margin-left: 20px;
         display: flex;
         flex-direction: column;
-        align-content: flex-start ;
+        align-content: flex-start;
     }
-    
-    #imagen1{
+
+    #imagen1 {
         width: 500px;
         margin-top: 30px;
         margin-bottom: 50px;
@@ -330,8 +332,8 @@
     .animate__animated.animate__rollIn {
         --animate-duration: 7s;
     }
-    
-    #imagen2{
+
+    #imagen2 {
         width: 500px;
         margin-left: 100px;
         margin-right: 80px;
@@ -339,12 +341,12 @@
         border-radius: 30px;
         border: 4px solid rgb(33, 31, 31);
     }
-    
+
     .animate__animated.animate__jackInTheBox {
         --animate-duration: 7s;
     }
 
-    #imagen3{
+    #imagen3 {
         width: 500px;
         height: 500px;
         margin-left: 100px;
@@ -357,14 +359,14 @@
     .animate__animated.animate__zoomInUp {
         --animate-duration: 7s;
     }
-    
-    .botones{
+
+    .botones {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    .btn-cambios{
+    .btn-cambios {
         color: rgb(228, 230, 232);
         font-size: 40px;
         font-weight: bold;
@@ -378,8 +380,8 @@
         border: 1px solid rgb(30, 29, 29);
         border-radius: 20px;
     }
-    
-    .btn-sitio{
+
+    .btn-sitio {
         width: 300px;
         color: rgb(228, 230, 232);
         background-color: rgb(170, 100, 34);
@@ -391,8 +393,8 @@
         margin-bottom: 20px;
         padding: 10px;
     }
-    
-    .btn-borrar{
+
+    .btn-borrar {
         background-color: rgb(193, 28, 28);
         color: whitesmoke;
         font-size: 50px;
@@ -404,7 +406,7 @@
         padding: 10px;
     }
 
-    .btn-logout{
+    .btn-logout {
         background-color: rgb(232, 100, 18);
         color: whitesmoke;
         font-family: 'Trebuchet MS';
@@ -414,205 +416,203 @@
         margin-left: 1000px;
         margin-top: 20px;
         margin-bottom: 30px;
-        width:150px;
+        width: 150px;
     }
 }
 
-@media (1023px <= width){
-.fondo{
-    border: 1px solid rgb(56, 55, 55);
-    padding: 30px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    margin-left: 100px;
-    height: 800px;
+@media (1023px <=width) {
+    .fondo {
+        border: 1px solid rgb(56, 55, 55);
+        padding: 30px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        margin-left: 100px;
+        height: 800px;
+    }
+
+    .barraSuperior {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        border: 1px solid gray;
+        border-radius: 20px;
+        height: 150px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .sitioNombre {
+        font-size: 50px;
+        font-weight: bold;
+        display: flex;
+        margin-top: 15px;
+        margin-left: 50px;
+        margin-right: 600px;
+    }
+
+    .sitio-logo {
+        display: flex;
+        width: 165px;
+        margin-right: 50px;
+        border-radius: 50%;
+        border: 2px solid rgb(51, 48, 48);
+    }
+
+    .body {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .columna-izquierda {
+        color: ghostwhite;
+        margin-top: 20px;
+        border: 1px solid rgb(128, 128, 128);
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        height: 575px;
+        padding: 10px;
+    }
+
+    .eslogan {
+        display: flex;
+        flex-direction: row;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 50px;
+        margin-left: 50px;
+        -webkit-text-stroke: 0.5px rgb(47, 46, 44);
+    }
+
+    .descripcion {
+        font-size: 20px;
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    ul {
+        list-style-type: circle;
+        font-size: 15px;
+        margin-top: 50px;
+        margin-left: 30px;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo-whats {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 40px;
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+
+    .numero {
+        margin-top: 45px;
+        font-size: 15px;
+    }
+
+    .columna-derecha {
+        margin-top: 20px;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+    }
+
+    #imagen1 {
+        width: 180px;
+        margin-top: 15px;
+        margin-left: 100px;
+        border-radius: 10px;
+        border: 2px solid rgb(33, 31, 31);
+    }
+
+    .animate__animated.animate__rollIn {
+        --animate-duration: 7s;
+    }
+
+    #imagen2 {
+        width: 180px;
+        margin-left: 390px;
+        margin-right: 80px;
+        border-radius: 10px;
+        border: 2px solid rgb(33, 31, 31);
+    }
+
+    .animate__animated.animate__jackInTheBox {
+        --animate-duration: 7s;
+    }
+
+    #imagen3 {
+        width: 190px;
+        height: 190px;
+        margin-left: 90px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 2px solid rgb(33, 31, 31);
+    }
+
+    .animate__animated.animate__zoomInUp {
+        --animate-duration: 7s;
+    }
+
+    .btn-cambios {
+        color: rgb(228, 230, 232);
+        font-size: 19px;
+        font-weight: bold;
+        padding: 12px;
+        background-color: rgb(193, 42, 231);
+        width: 100px;
+        height: 100px;
+        margin-left: 300px;
+        margin-right: 50px;
+        border-radius: 20px;
+        text-decoration: none;
+
+    }
+
+    .btn-cambios:hover {
+        background-color: #0e43f1;
+    }
+
+    .btn-guardar {
+
+        color: white;
+        font-size: 19px;
+        font-weight: bold;
+        padding: 12px;
+        background-color: teal;
+        width: 100px;
+        height: 100px;
+        margin-left: 40px;
+        margin-right: 40px;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        text-decoration: none;
+    }
+
+    .btn-guardar:hover {
+        background-color: #0ea9f1;
+    }
+
+
+    .btn-borrar {
+        background-color: rgb(193, 28, 28);
+        color: whitesmoke;
+        font-size: 20px;
+        font-weight: bold;
+        width: 100px;
+        height: 50px;
+        border-radius: 20px;
+        padding: 10px;
+
+
+    }
 }
-
-.barraSuperior{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-    border: 1px solid gray;
-    border-radius: 20px;
-    height: 150px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.sitioNombre{
-    font-size: 50px;
-    font-weight: bold;
-    display: flex;
-    margin-top: 15px;
-    margin-left: 50px;
-    margin-right: 600px;
-}
-
-.sitio-logo{
-    display: flex;
-    width: 165px;
-    margin-right: 50px;
-    border-radius: 50%;
-    border: 2px solid rgb(51, 48, 48);
-}
-
-.body{
-    display: flex;
-    flex-direction: row;
-}
-
-.columna-izquierda{
-    color: ghostwhite;
-    margin-top: 20px;
-    border: 1px solid rgb(128, 128, 128);
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    height: 575px;
-    padding: 10px;
-}
-
-.eslogan{
-    display: flex;
-    flex-direction: row;
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 50px;
-    margin-left: 50px;
-    -webkit-text-stroke: 0.5px rgb(47, 46, 44);
-}
-
-.descripcion{
-    font-size: 20px;
-    margin-top: 50px;
-    margin-left: 30px;
-}
-
-ul{
-    list-style-type: circle;
-    font-size: 15px;
-    margin-top: 50px;
-    margin-left: 30px;
-}
-
-.contacto{
-    display: flex;
-    flex-direction: row;
-}
-
-.logo-whats{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-top: 40px;
-    margin-left: 50px;
-    margin-right: 20px ;
-}
-
-.numero{
-    margin-top: 45px;
-    font-size: 15px;
-}
-
-.columna-derecha{
-    margin-top: 20px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start ;
-}
-
-#imagen1{
-    width: 180px;
-    margin-top: 15px;
-    margin-left: 100px;
-    border-radius: 10px;
-    border: 2px solid rgb(33, 31, 31);
-}
-
-.animate__animated.animate__rollIn {
-    --animate-duration: 7s;
-}
-
-#imagen2{
-    width: 180px;
-    margin-left: 390px;
-    margin-right: 80px;
-    border-radius: 10px;
-    border: 2px solid rgb(33, 31, 31);
-}
-
-.animate__animated.animate__jackInTheBox {
-    --animate-duration: 7s;
-}
-
-#imagen3{
-    width: 190px;
-    height: 190px;
-    margin-left: 90px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border: 2px solid rgb(33, 31, 31);
-}
-
-.animate__animated.animate__zoomInUp {
-    --animate-duration: 7s;
-}
-
-.btn-cambios{
-    color: rgb(228, 230, 232);
-    font-size: 19px;
-    font-weight: bold;
-    padding: 12px;
-    background-color: rgb(193, 42, 231);
-    width: 100px;
-    height: 100px;
-    margin-left: 300px;
-    margin-right: 50px;
-    border-radius: 20px;
-    text-decoration: none;
-   
-}
-
-.btn-cambios:hover {
-    background-color: #0e43f1;
-  }
-
-.btn-guardar{
-   
-    color: white;
-    font-size: 19px;
-    font-weight: bold;
-    padding: 12px;
-    background-color: teal;
-    width: 100px;
-    height: 100px;
-    margin-left: 40px;
-    margin-right: 40px;
-    border-radius: 20px;
-    margin-bottom: 50px;
-    text-decoration: none;
-}
-.btn-guardar:hover {
-    background-color: #0ea9f1;
-  }
-
-
-.btn-borrar{
-    background-color: rgb(193, 28, 28);
-    color: whitesmoke;
-    font-size: 20px;
-    font-weight: bold;
-    width: 100px;
-    height: 50px;
-    border-radius: 20px;
-    padding: 10px;
-    
-   
-}
-}
-
-
-

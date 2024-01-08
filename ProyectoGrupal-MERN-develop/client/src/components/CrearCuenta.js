@@ -9,7 +9,7 @@ function CrearCuenta() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-    const [type, setType] = useState("");
+    const [type, setType] = useState('');
 
     const [errors, setErrors] = useState({});
 
@@ -60,6 +60,7 @@ function CrearCuenta() {
                                 <option value= "true" >Cliente</option>
                                 <option value="false" >Emprendedor</option>
                             </select>
+                            {errors.type ? <span className='text-danger'>{errors.type.message}</span> : null}
                         </div>
                         <div className='form-group'>
                             <label htmlFor='password'>Contraseña:</label>

@@ -115,7 +115,7 @@ const CrearSitio = () => {
                             {errores.logo ? <span className='text-danger'>{errores.logo.message}</span> : null}
                         </div>
                         <div className='form-group'>
-                            <label>Imagen 1:</label>
+                            <label>Imagenes Ilustrativas: Imagen 1:</label>
                             <input type="text" className="form-control" value={imagen1} onChange={(e) => setImagen1(e.target.value)} />
                         </div>
                         <div className='form-group'>

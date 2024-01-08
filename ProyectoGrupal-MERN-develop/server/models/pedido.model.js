@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const EsquemaPedido = new mongoose.Schema({
+    emprendimiento:{
+        type: String,
+        required:[true,"Empredimiento requerido"],
+    },
     producto: {
         type: String,
         required:[true,"Producto requerido"],

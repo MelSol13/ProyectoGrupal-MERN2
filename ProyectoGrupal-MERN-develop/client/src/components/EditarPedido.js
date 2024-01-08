@@ -10,6 +10,7 @@ const ActualizarPedido = () => {
 
     const { id } = useParams();
     const [pedido, setPedido] = useState({});
+    const [emprendimiento, setEmprendimiento] = useState('');
     const [producto, setProducto] = useState('');
     const [cantidad, setCantidad] = useState('');
     const [imagen, setImagen] = useState('');
@@ -26,6 +27,7 @@ const ActualizarPedido = () => {
         axios.get(`http://localhost:8000/api/pedidos/${id}`, { withCredentials: true })
             .then(res => {
                 const pedido = res.data;
+                setEmprendimiento(pedido.emprendimiento);
                 setProducto(pedido.producto);
                 setCantidad(pedido.cantidad);
                 setImagen(pedido.imagen);
@@ -44,6 +46,7 @@ const ActualizarPedido = () => {
     const editarPedido = (e) => {
         e.preventDefault();
         axios.put(`http://localhost:8000/api/pedidos/${id}`, {
+            emprendimiento,
             producto,
             cantidad,
             imagen,
@@ -79,37 +82,45 @@ const ActualizarPedido = () => {
             <div className='row'>
                 <form className='form' onSubmit={editarPedido}>
                     <div className='col-md-4'>
+
                         <div className='form-group2'>
+                            <div>
+                                <label>Emprendimiento:</label>
+                                <input type="text" name="emprendimiento" className="form-control" value={emprendimiento} onChange={e => setEmprendimiento(e.target.value)} />
+                                {errores.emprendimiento ? <span className='text-danger'>{errores.emprendimiento.message}</span> : null}
+                            </div>
+                            <div>
                             <label>Producto:</label>
                             <input type="text" name="producto" className="form-control" value={producto} onChange={e => setProducto(e.target.value)} />
                             {errores.producto ? <span className='text-danger'>{errores.producto.message}</span> : null}
-                        <div>
-                            <label>Cantidad:</label>
-                            <input type="text" name="cantidad" className="form-control" value={cantidad} onChange={e => setCantidad(e.target.value)} />
-                            {errores.cantidad ? <span className='text-danger'>{errores.cantidad.message}</span> : null}
-                        </div>
-                        <div className='form-group'>
-                            <label>Si su pedido es un articulo que necesita foto de referencia adjuntela aqui:</label>
-                            <input type="text" className="form-control" value={imagen} onChange={(e) => setImagen(e.target.value)} />
-                        </div>
-                        <div className='form-group'>
-                            <label>Comentarios:</label>
-                            <input type="text" className="form-control" value={comentarios} onChange={(e) => setComentarios(e.target.value)} />
-                            {errores.comentarios ? <span className='text-danger'>{errores.comentarios.message}</span> : null}
-                        </div>
-                        <div className='form-group'>
-                            <label>Fecha De Retiro:</label>
-                            <input type="date" className="form-control" value={fecha} onChange={(e) => setFecha(e.target.value)} />
-                            {errores.fecha ? <span className='text-danger'>{errores.fecha.message}</span> : null}
-                        </div>
-                        <div className='form-group'>
-                            <label>Hora De Retiro:</label>
-                            <input type="time" className="form-control" value={hora} onChange={(e) => setHora(e.target.value)} />
-                            {errores.hora ? <span className='text-danger'>{errores.hora.message}</span> : null}
-                        </div>
-                        <div>
-                        </div>
-                        <button type="submit" className="btn-vista2" onClick={editarPedido}><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" className="bi bi-clipboard2-check" viewBox="0 0 16 16">
+                            </div>
+                            <div>
+                                <label>Cantidad:</label>
+                                <input type="text" name="cantidad" className="form-control" value={cantidad} onChange={e => setCantidad(e.target.value)} />
+                                {errores.cantidad ? <span className='text-danger'>{errores.cantidad.message}</span> : null}
+                            </div>
+                            <div className='form-group'>
+                                <label>Si su pedido es un articulo que necesita foto de referencia adjuntela aqui:</label>
+                                <input type="text" className="form-control" value={imagen} onChange={(e) => setImagen(e.target.value)} />
+                            </div>
+                            <div className='form-group'>
+                                <label>Comentarios:</label>
+                                <input type="text" className="form-control" value={comentarios} onChange={(e) => setComentarios(e.target.value)} />
+                                {errores.comentarios ? <span className='text-danger'>{errores.comentarios.message}</span> : null}
+                            </div>
+                            <div className='form-group'>
+                                <label>Fecha De Retiro:</label>
+                                <input type="date" className="form-control" value={fecha} onChange={(e) => setFecha(e.target.value)} />
+                                {errores.fecha ? <span className='text-danger'>{errores.fecha.message}</span> : null}
+                            </div>
+                            <div className='form-group'>
+                                <label>Hora De Retiro:</label>
+                                <input type="time" className="form-control" value={hora} onChange={(e) => setHora(e.target.value)} />
+                                {errores.hora ? <span className='text-danger'>{errores.hora.message}</span> : null}
+                            </div>
+                            <div>
+                            </div>
+                            <button type="submit" className="btn-vista2" onClick={editarPedido}><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="currentColor" className="bi bi-clipboard2-check" viewBox="0 0 16 16">
                                 <path d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5h3Z" />
                                 <path d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-12Z" />
                                 <path d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3Z" />

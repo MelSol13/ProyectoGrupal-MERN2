@@ -36,15 +36,19 @@ const VistaSitio = () => {
             .catch(err => console.log(err));
     }
 
+    const linkStyle = {
+        marginLeft: '150px',
+        color: 'white',
+    }
 
     return (
-        <div> 
+        <div>
             <nav>
-                
-                <div className="user-actions" style={{color: 'teal', fontSize: '22px', fontWeight: 'bold', paddingLeft: "20px", marginTop:"15px 15px" }}>
+
+                <div className="user-actions" style={{ color: 'teal', fontSize: '22px', fontWeight: 'bold', paddingLeft: "20px", marginTop: "15px 15px" }}>
                     <span className='username'>{UserName}</span>
-                 <ButtonLogout />
-                </div> 
+                    <ButtonLogout />
+                </div>
             </nav>
             <div className='fondo' style={{ background: `${sitio.colorFondo}` }}>
                 <div className='barraSuperior' style={{ background: `${sitio.colorBarra}` }}>
@@ -93,6 +97,13 @@ const VistaSitio = () => {
                 <button className="btn-borrar" onClick={() => borrarSitio(sitio._id)}><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" className="bi bi-trash3-fill" viewBox="0 0 16 16">
                     <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z" />
                 </svg>Borrar</button>
+                <Link className='btn btn-info' to={`/historialpedidos/${sitio._id}`} style={linkStyle}> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-description" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
+                    <path d="M9 17h6" />
+                    <path d="M9 13h6" />
+                </svg>Historial Pedidos</Link>
             </div>
         </div>
     );
