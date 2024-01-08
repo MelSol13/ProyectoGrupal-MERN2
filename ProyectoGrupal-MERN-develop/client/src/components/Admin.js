@@ -109,7 +109,7 @@ const Admin = () => {
 
           </nav>
 
-          <h1 style={titleStyle}>Empredimientos disponibles</h1>
+          <h1 style={titleStyle}>Emprendimientos Disponibles</h1>
           <div className="fondo3 text-center">
 
 
