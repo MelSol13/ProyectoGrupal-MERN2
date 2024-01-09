@@ -13,7 +13,7 @@ function Principal() {
             <div>
             <img src={imagen} id='img-princ' className='animate__animated animate__backInLeft' alt="Imagen predeterminada" />
             </div>
-            <p className='crea'> Crea tu sitio web</p>
+            <p className='crea'> Crea tu sitio web || Visita tu emprendimiento Favorito</p>
             <Link className="btn-principal" to={"/crearcuenta"}>¡Pruébalo Gratis!</Link>
         </div>
         </Layout>

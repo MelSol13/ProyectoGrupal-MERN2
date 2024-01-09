@@ -110,12 +110,12 @@ const CrearSitio = () => {
                             {errores.url ? <span className='text-danger'>{errores.url.message}</span> : null}
                         </div>
                         <div className='form-group'>
-                            <label>Logo:</label>
+                            <label>Logo: colocar URL de la imagen!</label>
                             <input type="text" className="form-control" value={logo} onChange={(e) => setLogo(e.target.value)} />
                             {errores.logo ? <span className='text-danger'>{errores.logo.message}</span> : null}
                         </div>
                         <div className='form-group'>
-                            <label>Imagenes Ilustrativas: Imagen 1:</label>
+                            <label>Imagenes Ilustrativas: colocar URL de la imagenes!</label>
                             <input type="text" className="form-control" value={imagen1} onChange={(e) => setImagen1(e.target.value)} />
                         </div>
                         <div className='form-group'>
