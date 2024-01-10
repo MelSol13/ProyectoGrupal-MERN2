@@ -9,6 +9,7 @@ const HacerPedido = () => {
     const { id } = useParams();
     const [pedido, setPedido] = useState({});
     const [emprendimiento, setEmprendimiento] = useState('');
+    const [cliente, setCliente] = useState('');
     const [producto, setProducto] = useState('');
     const [cantidad, setCantidad] = useState('');
     const [imagen, setImagen] = useState('');
@@ -33,6 +34,7 @@ const HacerPedido = () => {
 
     const limpiarFormulario = () => {
         setEmprendimiento('');
+        setCliente('');
         setProducto('');
         setCantidad('');
         setImagen('');
@@ -45,6 +47,7 @@ const HacerPedido = () => {
         e.preventDefault();
         axios.post("http://localhost:8000/api/pedidos", {
             emprendimiento,
+            cliente,
             producto,
             cantidad,
             imagen,
@@ -110,6 +113,11 @@ const HacerPedido = () => {
                                 {errores.emprendimiento ? <span className='text-danger'>{errores.emprendimiento.message}</span> : null}
                             </div>
                             <div>
+                                <label>Cliente:</label>
+                                <input type="text" name="cliente" className="form-control" value={cliente} onChange={e => setCliente(e.target.value)} />
+                                {errores.cliente ? <span className='text-danger'>{errores.cliente.message}</span> : null}
+                            </div>
+                            <div>
                                 <label>Producto:</label>
                                 <input type="text" name="producto" className="form-control" value={producto} onChange={e => setProducto(e.target.value)} />
                                 {errores.producto ? <span className='text-danger'>{errores.producto.message}</span> : null}
@@ -154,6 +162,7 @@ const HacerPedido = () => {
                     <div className='card'>
                         <h1 className='Titulo'>Carrito de Compras</h1>
                         <p>Emprendimiento:{state.emprendimiento}</p>
+                        <p>Cliente:{state.cliente}</p>
                         <p>Producto:{state.producto}</p>
                         <p>Cantidad:{state.cantidad}</p>
                         <p>Comentarios:{state.comentarios}</p>
@@ -171,6 +180,7 @@ const HacerPedido = () => {
                             <h2>Carrito De Compras</h2>
                         </div>
                         <p>Emprendimiento:{pedido.emprendimiento}</p>
+                        <p>Cliente:{pedido.cliente}</p>
                         <p>Producto:{pedido.producto}</p>
                         <p>Cantidad:{pedido.cantidad}</p>
                         <p>Comentarios:{pedido.comentarios}</p>

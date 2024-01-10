@@ -51,6 +51,7 @@ const HistorialPedidos = () => {
                 <thead>
                     <tr>
                         <th>Emprendimiento</th>
+                        <th>Cliente</th>
                         <th>Producto</th>
                         <th>Cantidad</th>
                         <th>Comentarios</th>
@@ -63,6 +64,7 @@ const HistorialPedidos = () => {
                         pedidos.map((pedido, index) => (
                             <tr key={index}>
                                 <td>{pedido.emprendimiento}</td>
+                                <td>{pedido.cliente}</td>
                                 <td>{pedido.producto}</td>
                                 <td>{pedido.cantidad}</td>
                                 <td>{pedido.comentarios}</td>

@@ -11,6 +11,7 @@ const ActualizarPedido = () => {
     const { id } = useParams();
     const [pedido, setPedido] = useState({});
     const [emprendimiento, setEmprendimiento] = useState('');
+    const [cliente, setCliente] = useState('');
     const [producto, setProducto] = useState('');
     const [cantidad, setCantidad] = useState('');
     const [imagen, setImagen] = useState('');
@@ -28,6 +29,7 @@ const ActualizarPedido = () => {
             .then(res => {
                 const pedido = res.data;
                 setEmprendimiento(pedido.emprendimiento);
+                setCliente(pedido.cliente);
                 setProducto(pedido.producto);
                 setCantidad(pedido.cantidad);
                 setImagen(pedido.imagen);
@@ -47,6 +49,7 @@ const ActualizarPedido = () => {
         e.preventDefault();
         axios.put(`http://localhost:8000/api/pedidos/${id}`, {
             emprendimiento,
+            cliente,
             producto,
             cantidad,
             imagen,
@@ -88,6 +91,11 @@ const ActualizarPedido = () => {
                                 <label>Emprendimiento:</label>
                                 <input type="text" name="emprendimiento" className="form-control" value={emprendimiento} onChange={e => setEmprendimiento(e.target.value)} />
                                 {errores.emprendimiento ? <span className='text-danger'>{errores.emprendimiento.message}</span> : null}
+                            </div>
+                            <div>
+                                <label>Cliente:</label>
+                                <input type="text" name="cliente" className="form-control" value={cliente} onChange={e => setCliente(e.target.value)} />
+                                {errores.cliente ? <span className='text-danger'>{errores.cliente.message}</span> : null}
                             </div>
                             <div>
                             <label>Producto:</label>
