@@ -143,7 +143,6 @@ const Contant = () => {
                 <div className="subheading mb-3">
                   MERN
                 </div>
-                <div>Currently studying MERN</div>
               </div>
               <div className="flex-shrink-0">
                 <span className="text-secondary">2023 - {year}</span>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../images/cart.gif";
+import Logo from "../images/cart-unscreen.gif";
 
 import "./Ad.css";
 const Header = () => {
