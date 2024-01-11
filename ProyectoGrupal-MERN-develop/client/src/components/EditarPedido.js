@@ -108,7 +108,7 @@ const ActualizarPedido = () => {
                                 {errores.cantidad ? <span className='text-danger'>{errores.cantidad.message}</span> : null}
                             </div>
                             <div className='form-group'>
-                                <label>Si su pedido es un articulo que necesita foto de referencia adjuntela aqui:</label>
+                                <label>Foto de referencia:</label>
                                 <input type="text" className="form-control" value={imagen} onChange={(e) => setImagen(e.target.value)} />
                             </div>
                             <div className='form-group'>
