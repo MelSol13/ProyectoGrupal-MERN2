@@ -6,10 +6,17 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./ActualizarSitio.css"
 import { UserName } from "./globals";
 import ButtonLogout from './ButtonLogout';
+import {getStorage, ref, uploadBytes, getDownloadURL} from 'firebase/storage'
+import appFirebase from '../credenciales';
 
+
+const storage = getStorage(appFirebase)
+
+let urlImDesc;
 
 const ActualizarSitio = () => {
 
+    
 
     const { id } = useParams();
     const [sitio, setSitio] = useState({});
@@ -69,16 +76,16 @@ const ActualizarSitio = () => {
             nombre,
             url,
             categoria,
-            logo,
+            logo:urlImDesc,
             eslogan,
             descripcion,
             servicio1,
             servicio2,
             servicio3,
             contacto,
-            imagen1,
-            imagen2,
-            imagen3,
+            imagen1:urlImDesc,
+            imagen2:urlImDesc,
+            imagen3:urlImDesc,
             colorBarra,
             colorFondo,
             colorInformacion,
@@ -86,7 +93,8 @@ const ActualizarSitio = () => {
         }, { withCredentials: true })
             .then(res => navigate(`/vistaprevia/${res.data._id}`))
             .catch(err => setErrors(err.response.data.errors))
-    };
+    }; 
+    
 
 
     const opcionesCategorias = [
@@ -106,6 +114,17 @@ const ActualizarSitio = () => {
         { value: 'Roboto', label: 'Roboto' },
         { value: 'Skranji', label: 'Skranji' },
     ];
+
+    const fileHandler = async (e) => {
+        //detectar el archivo
+        const archivoI = e.target.files[0];
+        //cargar al storage
+        const refArchivo = ref(storage,`imagenes/${archivoI.name}`)
+        await uploadBytes(refArchivo, archivoI)
+        //obtener url de la imagen de storage
+        urlImDesc = await getDownloadURL(refArchivo)
+    }
+
 
     return (
         <div className="container-3">
@@ -131,19 +150,19 @@ const ActualizarSitio = () => {
                         </div>
                         <div className="form-group">
                             <label>Logo:</label>
-                            <input type="text" className="form-control" value={logo} onChange={(e) => setLogo(e.target.value)} />
+                            <input type="file" className="form-control"  onChange={fileHandler} />
                         </div>
                         <div className="form-group">
                             <label>Imagen 1:</label>
-                            <input type="text" className="form-control" value={imagen1} onChange={(e) => setImagen1(e.target.value)} />
+                            <input type="file" className="form-control"  onChange={fileHandler} />
                         </div>
                         <div className="form-group">
                             <label>Imagen 2:</label>
-                            <input type="text" className="form-control" value={imagen2} onChange={(e) => setImagen2(e.target.value)} />
+                            <input type="file" className="form-control" onChange={fileHandler} />
                         </div>
                         <div className="form-group">
                             <label>Imagen 3:</label>
-                            <input type="text" className="form-control" value={imagen3} onChange={(e) => setImagen3(e.target.value)} />
+                            <input type="file" className="form-control"  onChange={fileHandler} />
                         </div>
                         <div className="form-group">
                             <label>Eslogan:</label>
