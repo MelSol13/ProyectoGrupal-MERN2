@@ -10,6 +10,7 @@ import img5 from "../images/img5.png";
 import img6 from "../images/img6.png";
 import img7 from "../images/img7.png";
 import img8 from "../images/img8.png";
+import img9 from "../images/img9.png";
 import imghellen from "../images/imghellen.jpeg";
 import imgmelissa from "../images/imgmelissa.jpeg";
 import imgpatricia from "../images/imgpatricia.jpeg";
@@ -171,7 +172,9 @@ const Contant = () => {
               <li className="list-inline-item">
                 <img src={img5} alt="Mi Icono" />
               </li>
-
+              <li className="list-inline-item">
+                <img src={img9} alt="Mi Icono" />
+              </li>
               <li className="list-inline-item">
                 <img src={img1} alt="Mi Icono" />
               </li>
@@ -181,11 +184,6 @@ const Contant = () => {
               <li className="list-inline-item">
                 <img src={img3} alt="Mi Icono" />
               </li>
-
-
-
-
-
               <li className="list-inline-item">
                 <img src={img4} alt="Mi Icono" />
               </li>
