@@ -3,6 +3,13 @@ import axios from 'axios';
 import { useNavigate, useParams, Link, useLocation } from "react-router-dom";
 import { UserName } from "./globals";
 import "./HacerPedido.css"
+import appFirebase from '../credenciales';
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from 'firebase/firestore';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage'
+
+
+const db = getFirestore(appFirebase)
+const storage = getStorage(appFirebase)
 
 const HacerPedido = () => {
 
@@ -12,7 +19,8 @@ const HacerPedido = () => {
     const [cliente, setCliente] = useState('');
     const [producto, setProducto] = useState('');
     const [cantidad, setCantidad] = useState('');
-    const [imagen, setImagen] = useState('');
+    const [urlImDesc, setUrlImDesc] = useState('');
+    const [imagendb, setImagendb] = useState({});
     const [comentarios, setComentarios] = useState('');
     const [fecha, setFecha] = useState('');
     const [hora, setHora] = useState('');
@@ -30,6 +38,22 @@ const HacerPedido = () => {
                     navigate("/iniciar-sesion");
                 }
             });
+
+        const imagendb = async () => {
+            try {
+                const querySnapshot = await getDocs(collection(db, 'imagen'))
+                const docs = []
+                querySnapshot.forEach((doc) => {
+                    docs.push({ ...doc.data(), id: doc.id })
+                })
+                setImagendb(docs)
+            } catch (error) {
+                console.log(error);
+            }
+
+        }
+        imagendb();
+
     }, [id])
 
     const limpiarFormulario = () => {
@@ -37,20 +61,33 @@ const HacerPedido = () => {
         setCliente('');
         setProducto('');
         setCantidad('');
-        setImagen('');
+        setUrlImDesc('');
         setComentarios('');
         setFecha('');
         setHora('');
     };
 
-    const guardarPedido = e => {
+    const guardarPedido = async (e) => {
         e.preventDefault();
+        const newImagen = {
+            imagen: urlImDesc
+        }
+        console.log("urlImDesc:", urlImDesc);
+
+        try {
+            await addDoc(collection(db,'imagen'),{
+                imagen: urlImDesc
+            })
+        } catch (error) {
+            console.log('Error saving data:', error);
+        }
+
         axios.post("http://localhost:8000/api/pedidos", {
             emprendimiento,
             cliente,
             producto,
             cantidad,
-            imagen,
+            imagen:urlImDesc,
             comentarios,
             fecha,
             hora
@@ -61,15 +98,15 @@ const HacerPedido = () => {
                 limpiarFormulario();
             })
             .catch(err => {
-                console.log("Hey error");
-                if (err.response.status === 401) {
+                console.log("Error al hacer el pedido:", err);
+                if (err.response && err.response.status === 401) {
                     navigate("/iniciar-sesion");
                 } else {
-                    setErrores(err.response.data.errors);
-                    console.log(err, "error");
+                    setErrores(err.response ? err.response.data.errors : {});
+                    console.error("Detalles del error:", err);
                 }
             });
-    };
+    }
 
     const borrarPedido = (id) => {
         axios.delete("http://localhost:8000/api/pedidos/" + id, { withCredentials: true })
@@ -85,6 +122,20 @@ const HacerPedido = () => {
             .then(res => navigate("/"))
             .catch(err => console.log(err));
     }
+
+    const fileHandler = async (e) => {
+        const archivoL = e.target.files[0];
+        const refArchivo = ref(storage, `imagen/${archivoL.name}`);
+        try {
+            await uploadBytes(refArchivo, archivoL);
+            const imageUrl = await getDownloadURL(refArchivo);
+            setUrlImDesc(imageUrl); 
+        } catch (error) {
+            console.error("Error uploading file:", error);
+        }
+    };
+
+
     return (
         <div className='container'>
             <div className="fondo3"></div>
@@ -129,7 +180,7 @@ const HacerPedido = () => {
                             </div>
                             <div className='form-group'>
                                 <label>Si gusta adjunte una foto de referencia:</label>
-                                <input type="text" className="form-control" value={imagen} onChange={(e) => setImagen(e.target.value)} />
+                                <input type="file" className="form-control"  onChange={fileHandler} />
                             </div>
                             <div className='form-group'>
                                 <label>Comentarios:</label>
@@ -205,4 +256,5 @@ const HacerPedido = () => {
         </div>
     );
 };
+
 export default HacerPedido;
