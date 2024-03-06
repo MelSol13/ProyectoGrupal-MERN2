@@ -1,9 +1,12 @@
 {
   "name": "proyecto-individual",
   "version": "1.0.0",
+  "homepage": "https://MelSol13.github.io/ProyectoGrupal-MERN-develop",
   "description": "",
   "main": "server.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
@@ -22,6 +25,7 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "firebase": "^10.7.1",
+    "gh-pages": "^6.1.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.5.4",
     "react": "^18.2.0",
