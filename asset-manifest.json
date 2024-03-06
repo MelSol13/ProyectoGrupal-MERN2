@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ProyectoGrupal-MERN-develop/static/css/main.382f415a.css",
+    "main.js": "/ProyectoGrupal-MERN-develop/static/js/main.dbf9bbf1.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/ProyectoGrupal-MERN-develop/static/js/787.c4e7f8f9.chunk.js",
+    "static/media/cart-unscreen.gif": "/ProyectoGrupal-MERN-develop/static/media/cart-unscreen.a3a1e7ff0a6df5a916d3.gif",
+    "static/media/fon.jpg": "/ProyectoGrupal-MERN-develop/static/media/fon.9ffa622d605757fb6048.jpg",
+    "static/media/cart.gif": "/ProyectoGrupal-MERN-develop/static/media/cart.a1374e34eb2877fa2a8e.gif",
+    "static/media/imghellen.jpeg": "/ProyectoGrupal-MERN-develop/static/media/imghellen.c3d7f18122b5d3b961e5.jpeg",
+    "static/media/imgmariliny.jpeg": "/ProyectoGrupal-MERN-develop/static/media/imgmariliny.fcebf4de927ea03f0fb8.jpeg",
+    "static/media/imgmelissa.jpeg": "/ProyectoGrupal-MERN-develop/static/media/imgmelissa.7e157f3e4f308423d025.jpeg",
+    "static/media/imghillary.jpg": "/ProyectoGrupal-MERN-develop/static/media/imghillary.06e6d903fe40104933b1.jpg",
+    "static/media/imgpatricia.jpeg": "/ProyectoGrupal-MERN-develop/static/media/imgpatricia.e9d6b07582fb10cf036a.jpeg",
+    "index.html": "/ProyectoGrupal-MERN-develop/index.html",
+    "main.382f415a.css.map": "/ProyectoGrupal-MERN-develop/static/css/main.382f415a.css.map",
+    "main.dbf9bbf1.js.map": "/ProyectoGrupal-MERN-develop/static/js/main.dbf9bbf1.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/ProyectoGrupal-MERN-develop/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.382f415a.css",
+    "static/js/main.dbf9bbf1.js"
+  ]
+}
