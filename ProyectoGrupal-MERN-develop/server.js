@@ -4,6 +4,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
 const session = require('express-session');
+const path = require('path');
 
 app.use(cookieParser());
 
@@ -16,6 +17,7 @@ app.use(
     })
 );
 app.use(express.json(), express.urlencoded({extended:true}));
+app.use(express.static(path.join(__dirname, 'build')));
 
 //Para usar cookies
 app.use(cookieParser());
