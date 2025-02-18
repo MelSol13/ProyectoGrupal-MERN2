@@ -28,7 +28,6 @@
     "react-calendar": "^4.7.0",
     "react-datepicker": "^4.24.0",
     "react-dom": "^18.2.0",
-    "react-font-picker": "^1.1.8",
     "react-time-picker": "^6.5.2",
     "uuid": "^9.0.1"
   }
