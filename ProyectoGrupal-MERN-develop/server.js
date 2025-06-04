@@ -13,17 +13,17 @@ app.use(cookieParser());
 
 
 app.use(session({
-secret: process.env.SESSION_SECRET,
-resave: false,
-saveUninitialized: false,
-store: MongoStore.create({
-mongoUrl: process.env.MONGODB_URI,
-}),
-cookie: {
-secure: true,
-httpOnly: true
-}
-}));
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({
+    mongoUrl: process.env.MONGODB_URI,
+    }),
+    cookie: {
+        secure: true,
+        httpOnly: true
+    }
+    }));
 
 app.use(express.json(), express.urlencoded({extended:true}));
 
@@ -58,3 +58,4 @@ app.listen(PORT, () => console.log(`Servidor Listo en http://localhost:${PORT}`)
 app.get("/", (req, res) => {
     res.send("Servidor backend funcionando correctamente.");
 });
+
