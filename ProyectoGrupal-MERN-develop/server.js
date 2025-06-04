@@ -37,3 +37,7 @@ misRutas(app);
 
 
 app.listen(PORT, () => console.log(`Servidor Listo en http://localhost:${PORT}`));
+
+app.get("/", (req, res) => {
+    res.send("Servidor backend funcionando correctamente.");
+});
