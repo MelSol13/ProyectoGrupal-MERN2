@@ -22,13 +22,22 @@ app.use(express.json(), express.urlencoded({extended:true}));
 //Para usar cookies
 app.use(cookieParser());
 
-app.use(
-    cors({
-        origin: "http://localhost:3000",
-        //Credenciales
-        credentials:true
-    })
-)
+const allowedOrigins = [
+    "http://localhost:3000",
+    "https://melsol13.github.io"
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+    } else {
+        return callback(new Error("No permitido por CORS"));
+    }
+    },
+    credentials: true
+}));
 
 require("./server/config/mongoose.config");
 
