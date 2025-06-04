@@ -21,6 +21,8 @@ function CrearCuenta() {
     const registro = e => {
         e.preventDefault();
 
+        console.log("API base URL en producción:", process.env.REACT_APP_API_BASE_URL); 
+
         axios.post(`${process.env.REACT_APP_API_BASE_URL}/register`, {
             firstName,
             lastName,
@@ -29,8 +31,14 @@ function CrearCuenta() {
             confirmPassword,
             type
         })
-            .then(res => res.data.type === 0, navigate("/iniciar-sesion"))
-            .catch(err => setErrors(err.response.data.errors));
+        .then(res => {
+            if (res.data.type === 0) {
+                navigate("/iniciar-sesion");
+            }
+        })
+        .catch(err => {
+            setErrors(err.response.data.errors);
+        });
     }
 
     return (
