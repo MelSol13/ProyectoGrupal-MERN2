@@ -1,8 +1,9 @@
+require("dotenv").config(); 
 const express = require("express");
 const app = express();
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-
+const PORT = process.env.PORT || 8000;
 const session = require('express-session');
 
 
@@ -35,4 +36,4 @@ const misRutas = require("./server/routes/sitio.routes");
 misRutas(app);
 
 
-app.listen(8000, ()=>console.log("Servidor Listo!"));
+app.listen(PORT, () => console.log(`Servidor Listo en http://localhost:${PORT}`));
