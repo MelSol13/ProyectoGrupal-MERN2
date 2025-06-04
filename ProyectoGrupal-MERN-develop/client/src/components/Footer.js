@@ -3,7 +3,6 @@ import Avatar from "../images/fon.jpg";
 import "./Ad.css";
 import { Link } from "react-router-dom";
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const Footer = () => {
   const year = new Date().getFullYear();
