@@ -1,6 +1,7 @@
 import React from "react";
 import Avatar from "../images/fon.jpg";
 import "./Ad.css";
+import { Link } from "react-router-dom";
 
 const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
@@ -21,13 +22,15 @@ const Footer = () => {
             </p>
           </div>
           <div className="foo">
-            <a href={`${API_BASE_URL}/contact`}><img
-              src={Avatar}
-              alt="Avatar"
-              className="rounded-circle ms-3 align-middle"
-              width="42"
-              height="40"
-            ></img></a>
+            <Link to="/contact">
+              <img
+                src={Avatar}
+                alt="Avatar"
+                className="rounded-circle ms-3 align-middle"
+                width="42"
+                height="40"
+              />
+            </Link>
           </div>
         </div>
       </div>
