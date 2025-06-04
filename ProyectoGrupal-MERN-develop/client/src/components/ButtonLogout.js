@@ -2,11 +2,13 @@ import axios from "axios";
 import { useNavigate} from "react-router-dom";
 import"./ButtonLogout.css"
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 const ButtonLogout = () => {
     const navigate = useNavigate();
 
     const cerrarSesion = () => {
-        axios.get('http://localhost:8000/api/logout', {withCredentials: true})
+        axios.get(`${API_BASE_URL}/api/logout`, {withCredentials: true})
         .then( res => navigate("/"))
         .catch(err => console.log (err));
     }

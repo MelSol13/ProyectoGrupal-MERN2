@@ -18,8 +18,7 @@ let urlImDesc;
 
 const ActualizarSitio = () => {
 
-    
-
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
     const { id } = useParams();
     const [sitio, setSitio] = useState({});
     const [nombre, setNombre] = useState('');
@@ -43,7 +42,7 @@ const ActualizarSitio = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/sitios/${id}`, { withCredentials: true })
+        axios.get(`${API_BASE_URL}/api/sitios/${id}`, { withCredentials: true })
             .then(res => {
                 const sitio = res.data;
                 setNombre(sitio.nombre);
@@ -74,7 +73,7 @@ const ActualizarSitio = () => {
 
     const actualizarSitio = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:8000/api/sitios/${id}`, {
+        axios.put(`${API_BASE_URL}/api/sitios/${id}`, {
             nombre,
             url,
             categoria,

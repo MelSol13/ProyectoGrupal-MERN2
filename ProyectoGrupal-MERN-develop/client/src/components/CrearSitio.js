@@ -10,10 +10,13 @@ import { collection, addDoc, getDocs } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { app } from "../credenciales"; 
 
+
+
 const db = getFirestore(app);
 const storage = getStorage(app);
 
 const CrearSitio = () => {
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
     const imagen = "https://media.istockphoto.com/id/1387782756/es/foto/pc-de-computadora-moderna-con-carta-de-colores-en-la-pantalla-del-monitor-taza-de-caf%C3%A9-y.jpg?s=612x612&w=0&k=20&c=M94eQcTWc4bp4Z9_4VC_PO0olEwnoqpF7NT1kna6LaY=";
 
@@ -61,7 +64,7 @@ const CrearSitio = () => {
         }
 
 
-        axios.post("http://localhost:8000/api/sitios", {
+        axios.post(`${API_BASE_URL}/api/sitios`, {
             nombre,
             url,
             categoria,

@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import "./Ad.css";
 import Layout from './Layout';
 
-
-
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const titleStyle = {
   color: 'black',
@@ -44,14 +43,14 @@ const Admin = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/sitios", { withCredentials: true })
+      .get(`${API_BASE_URL}/api/sitios`, { withCredentials: true })
       .then((res) => setSitios(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const eliminar = (id) => {
     axios
-      .delete("http://localhost:8000/api/sitios/" + id, { withCredentials: true })
+      .delete(`${API_BASE_URL}/api/sitios/${id}`, { withCredentials: true })
       .then((res) => {
         let nuevaLista = sitios.filter((sitio) => sitio._id !== id);
         setSitios(nuevaLista);

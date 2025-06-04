@@ -10,8 +10,9 @@ function CrearCuenta() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [type, setType] = useState('');
-
     const [errors, setErrors] = useState({});
+
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -20,7 +21,7 @@ function CrearCuenta() {
     const registro = e => {
         e.preventDefault();
 
-        axios.post('http://localhost:8000/api/register', {
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/register`, {
             firstName,
             lastName,
             email,

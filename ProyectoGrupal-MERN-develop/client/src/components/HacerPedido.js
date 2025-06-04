@@ -8,6 +8,8 @@ import { collection, addDoc, getDocs } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { app } from "../credenciales"; 
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 const db = getFirestore(app);
 const storage = getStorage(app);
 
@@ -31,7 +33,7 @@ const HacerPedido = () => {
     const location = useLocation();
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/pedidos/" + id, { withCredentials: true })
+        axios.get(`${API_BASE_URL}/api/pedidos/${id}`, { withCredentials: true })
             .then(res => setPedido(res.data))
             .catch(err => {
                 if (err.response.status === 401) {
@@ -82,7 +84,7 @@ const HacerPedido = () => {
             console.log('Error saving data:', error);
         }
 
-        axios.post("http://localhost:8000/api/pedidos", {
+        axios.post(`${API_BASE_URL}/api/pedidos`, {
             emprendimiento,
             cliente,
             producto,
@@ -109,7 +111,7 @@ const HacerPedido = () => {
     }
 
     const borrarPedido = (id) => {
-        axios.delete("http://localhost:8000/api/pedidos/" + id, { withCredentials: true })
+        axios.delete(`${API_BASE_URL}/api/pedidos/${id}`, { withCredentials: true })
             .then(res => {
                 setPedido(res.data);
                 navigate("/hacerpedido", { state: false });
@@ -118,7 +120,7 @@ const HacerPedido = () => {
     }
 
     const cerrarSesion = () => {
-        axios.get('http://localhost:8000/api/logout', { withCredentials: true })
+        axios.get(`${API_BASE_URL}/api/logout`, { withCredentials: true })
             .then(res => navigate("/"))
             .catch(err => console.log(err));
     }

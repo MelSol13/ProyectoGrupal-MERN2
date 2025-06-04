@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { UserName } from "./globals";
 import "./IniciarSesion.css"
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 function IniciarSesion() {
     const [emailLogin, setEmailLogin] = useState('');
     const [passwordLogin, setPasswordLogin] = useState('');
@@ -13,7 +15,7 @@ function IniciarSesion() {
 
     const login = e => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/login', {
+        axios.post(`${API_BASE_URL}/api/login`, {
             email: emailLogin,
             password: passwordLogin
         }, { withCredentials: true })

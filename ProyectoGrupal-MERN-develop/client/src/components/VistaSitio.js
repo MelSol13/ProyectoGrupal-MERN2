@@ -13,6 +13,7 @@ import { app } from "../credenciales";
 const db = getFirestore(app);
 const storage = getStorage(app);
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const VistaSitio = () => {
     const [sitio, setSitio] = useState({});
@@ -25,7 +26,7 @@ const VistaSitio = () => {
 
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/sitios/" + id, { withCredentials: true })
+        axios.get(`${API_BASE_URL}/api/sitios/${id}`, { withCredentials: true })
             .then(res => setSitio(res.data))
             .catch(err => {
                 if (err.response.status === 401) {
@@ -52,13 +53,13 @@ const VistaSitio = () => {
 
 
     const borrarSitio = (id) => {
-        axios.delete("http://localhost:8000/api/sitios/" + id, { withCredentials: true })
+        axios.delete(`${API_BASE_URL}/api/sitios/${id}`, { withCredentials: true })
             .then(res => navigate("/crearsitio"))
             .catch(err => console.log(err));
     }
 
     const verSitio = (id) => {
-        axios.delete("http://localhost:8000/api/sitios/", { withCredentials: true })
+        axios.delete(`${API_BASE_URL}/api/sitios/${id}`, { withCredentials: true })
             .then(res => navigate("/admin"))
             .catch(err => console.log(err));
     }

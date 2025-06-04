@@ -4,12 +4,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import "./HistorialPedidos.css"
 import { UserName } from "./globals";
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
 const HistorialPedidos = () => {
     const [pedidos, setPedidos] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get("http://localhost:8000/api/pedidos", { withCredentials: true })
+        axios.get(`${API_BASE_URL}/api/pedidos`, { withCredentials: true })
             .then(res => setPedidos(res.data))
             .catch(err => {
                 if (err.response.status === 401) {
@@ -19,7 +21,7 @@ const HistorialPedidos = () => {
     }, [])
 
     const borrarPedido = idPedido => {
-        axios.delete("http://localhost:8000/api/pedidos/" + idPedido)
+        axios.delete(`${API_BASE_URL}/api/pedidos/${idPedido}`)
             .then(res => {
                 let nuevaLista = pedidos.filter(pedido => pedido._id !== idPedido);
                 setPedidos(nuevaLista);
@@ -27,7 +29,7 @@ const HistorialPedidos = () => {
     }
 
     const cerrarSesion = () => {
-        axios.get('http://localhost:8000/api/logout', { withCredentials: true })
+        axios.get(`${API_BASE_URL}/api/logout`, { withCredentials: true })
             .then(res => navigate("/"))
             .catch(err => console.log(err));
     }

@@ -5,6 +5,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 8000;
 const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 
 app.use(cookieParser());
@@ -17,6 +18,23 @@ app.use(
         cookie: { secure: false }, 
     })
 );
+
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+
+app.use(session({
+secret: process.env.SESSION_SECRET,
+resave: false,
+saveUninitialized: false,
+store: MongoStore.create({
+mongoUrl: process.env.MONGODB_URI,
+}),
+cookie: {
+secure: true,
+httpOnly: true
+}
+}));
+
 app.use(express.json(), express.urlencoded({extended:true}));
 
 //Para usar cookies

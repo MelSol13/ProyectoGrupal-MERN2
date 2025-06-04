@@ -7,7 +7,7 @@ import "./Editarpedido.css"
 
 
 const ActualizarPedido = () => {
-
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
     const { id } = useParams();
     const [pedido, setPedido] = useState({});
     const [emprendimiento, setEmprendimiento] = useState('');
@@ -25,7 +25,7 @@ const ActualizarPedido = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/api/pedidos/${id}`, { withCredentials: true })
+        axios.get(`${API_BASE_URL}/pedidos/${id}`, { withCredentials: true })
             .then(res => {
                 const pedido = res.data;
                 setEmprendimiento(pedido.emprendimiento);
@@ -47,7 +47,7 @@ const ActualizarPedido = () => {
 
     const editarPedido = (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:8000/api/pedidos/${id}`, {
+        axios.put(`${API_BASE_URL}/pedidos/${id}`, {
             emprendimiento,
             cliente,
             producto,
@@ -61,7 +61,7 @@ const ActualizarPedido = () => {
             .catch(err => setErrors(err.response.data.errors))
     };
     const cerrarSesion = () => {
-        axios.get('http://localhost:8000/api/logout', { withCredentials: true })
+        axios.get(`${API_BASE_URL}/logout`, { withCredentials: true })
             .then(res => navigate("/"))
             .catch(err => console.log(err));
     }
