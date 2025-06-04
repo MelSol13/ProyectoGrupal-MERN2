@@ -1,9 +1,9 @@
-// Import the functions you need from the SDKs you need
+// Importa las funciones necesarias de Firebase
 import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getFirestore } from "firebase/firestore/lite";  
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
+// Configuración de Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyBQlLylaugL_TCrOLcQd5dwmdAERAHCK00",
     authDomain: "imagenes-react-storage.firebaseapp.com",
@@ -13,7 +13,13 @@ const firebaseConfig = {
     appId: "1:48939756983:web:84a4dc63950e18f0f84c32"
 };
 
-// Initialize Firebase
-const appFirebase = initializeApp(firebaseConfig);
+// Inicializa Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app); // Inicializa Firestore
+const storage = getStorage(app); // Inicializa Storage
 
-export default appFirebase
+console.log("Firestore:", db);
+console.log("Storage:", storage);
+
+// Exporta Firebase, Firestore y Storage
+export { app, db, storage };

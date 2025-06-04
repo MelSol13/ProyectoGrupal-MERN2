@@ -5,12 +5,13 @@ import axios from 'axios';
 import { useNavigate, useLocation } from "react-router-dom";
 import "./CrearSitio.css"
 import ButtonLogout from './ButtonLogout';
-import appFirebase from '../credenciales';
-import { getFirestore, collection, addDoc } from 'firebase/firestore';
-import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage'
+import { getFirestore } from "firebase/firestore/lite";  
+import { collection, addDoc, getDocs } from "firebase/firestore";  
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { app } from "../credenciales"; 
 
-const db = getFirestore(appFirebase)
-const storage = getStorage(appFirebase)
+const db = getFirestore(app);
+const storage = getStorage(app);
 
 const CrearSitio = () => {
 

@@ -5,11 +5,13 @@ import ButtonLogout from './ButtonLogout';
 import "./VistaSitio.css"
 import { UserName } from "./globals";
 import 'animate.css';
-import appFirebase from '../credenciales';
-import {getFirestore, collection, getDocs, deleteDoc, doc} from 'firebase/firestore'
+import { getFirestore } from "firebase/firestore/lite";  
+import { collection, addDoc, getDocs } from "firebase/firestore";  
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { app } from "../credenciales"; 
 
-
-const db = getFirestore(appFirebase)
+const db = getFirestore(app);
+const storage = getStorage(app);
 
 
 const VistaSitio = () => {

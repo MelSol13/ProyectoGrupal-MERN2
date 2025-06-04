@@ -3,13 +3,13 @@ import axios from 'axios';
 import { useNavigate, useParams, Link, useLocation } from "react-router-dom";
 import { UserName } from "./globals";
 import "./HacerPedido.css"
-import appFirebase from '../credenciales';
-import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from 'firebase/firestore';
-import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage'
+import { getFirestore } from "firebase/firestore/lite";  
+import { collection, addDoc, getDocs } from "firebase/firestore";  
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { app } from "../credenciales"; 
 
-
-const db = getFirestore(appFirebase)
-const storage = getStorage(appFirebase)
+const db = getFirestore(app);
+const storage = getStorage(app);
 
 const HacerPedido = () => {
 
