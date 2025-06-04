@@ -2,7 +2,7 @@ import React from "react";
 import Avatar from "../images/fon.jpg";
 import "./Ad.css";
 
-const FRONTEND_BASE_URL = process.env.REACT_APP_FRONTEND_BASE_URL;
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="foo">
-            <a href={`${FRONTEND_BASE_URL}/contact`}><img
+            <a href={`${API_BASE_URL}/contact`}><img
               src={Avatar}
               alt="Avatar"
               className="rounded-circle ms-3 align-middle"
