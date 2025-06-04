@@ -10,17 +10,6 @@ const MongoStore = require('connect-mongo');
 
 app.use(cookieParser());
 
-app.use(
-    session({
-        secret: "tu secreto", 
-        resave: false,
-        saveUninitialized: true,
-        cookie: { secure: false }, 
-    })
-);
-
-const session = require('express-session');
-const MongoStore = require('connect-mongo');
 
 app.use(session({
 secret: process.env.SESSION_SECRET,
