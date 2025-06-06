@@ -39,6 +39,8 @@ function CrearCuenta() {
         .catch(err => {
             if (err.response?.data?.errors) {
                 setErrors(err.response.data.errors);
+            } else if (err.response?.data?.message) {
+                alert(err.response.data.message);
             } else {
                 console.error("Error inesperado:", err);
             }
