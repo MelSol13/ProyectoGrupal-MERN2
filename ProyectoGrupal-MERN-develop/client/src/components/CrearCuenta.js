@@ -41,8 +41,10 @@ function CrearCuenta() {
         .catch(err => {
             if (err.response?.data?.errors) {
                 setErrors(err.response.data.errors);
+                console.log("Errores de validación:", err.response.data.errors); // 👈 extra
             } else if (err.response?.data?.message) {
                 alert(err.response.data.message);
+                console.log("Mensaje:", err.response.data.message); // 👈 extra
             } else {
                 console.error("Error inesperado:", err);
             }
