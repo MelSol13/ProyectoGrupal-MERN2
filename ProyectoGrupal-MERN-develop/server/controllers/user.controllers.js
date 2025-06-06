@@ -21,9 +21,18 @@ module.exports.register = (req, res) => {
 
         })
         .catch(err => {
-            console.log(err);
-            res.status(400).json({ errors: err.errors });
-        })
+            if (err.name === "ValidationError") {
+                const errors = {};
+                for (let field in err.errors) {
+                    errors[field] = err.errors[field].message;
+                }
+                console.log("Errores de validación del backend:", errors); // 👈 Para verlos en consola del servidor
+                return res.status(400).json({ errors });
+            }
+
+            console.error("Error inesperado:", err);
+            res.status(500).json({ message: "Error del servidor." });
+        });
 }
 
 module.exports.login = (req, res) => {
