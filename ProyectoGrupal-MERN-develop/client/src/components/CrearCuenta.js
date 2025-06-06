@@ -30,6 +30,8 @@ function CrearCuenta() {
             password,
             confirmPassword,
             type
+        },{
+            withCredentials: true
         })
         .then(res => {
             if (res.data.type === 0) {

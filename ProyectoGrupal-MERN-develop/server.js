@@ -3,32 +3,10 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-const PORT = process.env.PORT || 8000;
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
-
-
-app.use(cookieParser());
-
-
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({
-    mongoUrl: process.env.MONGODB_URI,
-    }),
-    cookie: {
-        secure: true,
-        httpOnly: true
-    }
-    }));
-
-app.use(express.json(), express.urlencoded({extended:true}));
-
-//Para usar cookies
-app.use(cookieParser());
+const PORT = process.env.PORT || 8000;
 
 const allowedOrigins = [
     "http://localhost:3000",
@@ -47,8 +25,26 @@ app.use(cors({
     credentials: true
 }));
 
-require("./server/config/mongoose.config");
 
+app.use(express.json(), express.urlencoded({extended:true}));
+app.use(cookieParser());
+
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({
+    mongoUrl: process.env.MONGODB_URI,
+    }),
+    cookie: {
+        secure: true,
+        httpOnly: true,
+        sameSite: "none"
+    }
+    }));
+
+
+require("./server/config/mongoose.config");
 const misRutas = require("./server/routes/sitio.routes");
 misRutas(app);
 
