@@ -23,7 +23,7 @@ function CrearCuenta() {
 
         console.log("API base URL en producción:", process.env.REACT_APP_API_BASE_URL); 
 
-        axios.post(`${process.env.REACT_APP_API_BASE_URL}/register`, {
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/apu}i/register`, {
             firstName,
             lastName,
             email,
@@ -37,7 +37,11 @@ function CrearCuenta() {
             }
         })
         .catch(err => {
-            setErrors(err.response.data.errors);
+            if (err.response?.data?.errors) {
+                setErrors(err.response.data.errors);
+            } else {
+                console.error("Error inesperado:", err);
+            }
         });
     }
 
