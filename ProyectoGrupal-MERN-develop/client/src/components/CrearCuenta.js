@@ -23,7 +23,7 @@ function CrearCuenta() {
 
         console.log("API base URL en producción:", process.env.REACT_APP_API_BASE_URL); 
 
-        axios.post(`${process.env.REACT_APP_API_BASE_URL}/apu}i/register`, {
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/register`, {
             firstName,
             lastName,
             email,
