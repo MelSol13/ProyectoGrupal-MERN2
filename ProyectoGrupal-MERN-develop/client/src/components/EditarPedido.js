@@ -25,7 +25,7 @@ const ActualizarPedido = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get(`${API_BASE_URL}/pedidos/${id}`, { withCredentials: true })
+        axios.get(`${API_BASE_URL}/api/pedidos/${id}`, { withCredentials: true })
             .then(res => {
                 const pedido = res.data;
                 setEmprendimiento(pedido.emprendimiento);
