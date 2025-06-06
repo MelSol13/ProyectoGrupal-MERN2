@@ -1,4 +1,10 @@
 require("dotenv").config(); 
+
+if (!process.env.SECRET_KEY) {
+    console.error("ERROR: La variable de entorno SECRET_KEY no está definida.");
+    process.exit(1);
+}
+
 const express = require("express");
 const app = express();
 const cors = require("cors");

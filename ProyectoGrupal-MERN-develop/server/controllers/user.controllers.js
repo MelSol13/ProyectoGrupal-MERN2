@@ -1,6 +1,6 @@
 const Usuario = require("../models/user.model");
 const jwt = require("jsonwebtoken");
-const secret_key = "Esta es mi llave secreta";
+const secret_key = process.env.SECRET_KEY;
 const bcrypt = require("bcrypt");
 
 module.exports.register = (req, res) => {
@@ -14,8 +14,10 @@ module.exports.register = (req, res) => {
             const myJWT = jwt.sign(payload, secret_key);
 
             res
-                .cookie("usertoken", myJWT, secret_key, {
-                    httpOnly: true
+                .cookie("usertoken", myJWT, {
+                    httpOnly: true,
+                    secure: true,  
+                    sameSite: 'None'
                 })
                 .json(usuario)
 
@@ -26,11 +28,11 @@ module.exports.register = (req, res) => {
                 for (let field in err.errors) {
                     errors[field] = err.errors[field].message;
                 }
-                console.log("Errores de validación del backend:", errors); // 👈 Para verlos en consola del servidor
+                console.log("Errores de validación del backend:", errors); 
                 return res.status(400).json({ errors });
             }
 
-            console.error("Error inesperado:", err);
+            console.error("Error inesperado:", JSON.stringify(err, null, 2));
             res.status(500).json({ message: "Error del servidor." });
         });
 }
@@ -59,8 +61,10 @@ module.exports.login = (req, res) => {
                             };
 
                             res
-                                .cookie("usertoken", myJWT, secret_key, {
-                                    httpOnly: true
+                                .cookie("usertoken", myJWT,{
+                                    httpOnly: true,
+                                    secure: true,  
+                                    sameSite: 'None'
                                 })
                                 .json(response);
 
