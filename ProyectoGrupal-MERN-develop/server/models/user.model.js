@@ -28,6 +28,7 @@ const EsquemaUsuario = new mongoose.Schema({
     type:{
         type: Boolean,
         required: [true, "Tipo obligatorio."],
+        enum: [true, false],
         default: true//cliente
     }
 }, { timestamps: true, versionKey: false })
