@@ -22,7 +22,7 @@ module.exports.register = (req, res) => {
         })
         .catch(err => {
             console.log(err);
-            res.status(400).json(err);
+            res.status(400).json({ errors: err.errors });
         })
 }
 
