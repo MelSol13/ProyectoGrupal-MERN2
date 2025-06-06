@@ -21,14 +21,14 @@ module.exports = (app) => {
 
     app.get("/api/logout", UserController.logout);
 
-    app.get("/api/pedidos/", PedidoController.ver_todos);
-
-    app.get("/api/pedidos/:id", PedidoController.ver_pedido);
-
-    app.post("/api/pedidos/", PedidoController.crear_pedido);
-
-    app.put("/api/pedidos/:id", PedidoController.editar_pedido);
-
-    app.delete("/api/pedidos/:id", PedidoController.borrar_pedido);
+    app.get("/api/pedidos/", authenticate, PedidoController.ver_todos);
+    
+    app.get("/api/pedidos/:id", authenticate, PedidoController.ver_pedido);
+    
+    app.post("/api/pedidos/", authenticate, PedidoController.crear_pedido);
+    
+    app.put("/api/pedidos/:id", authenticate, PedidoController.editar_pedido);
+    
+    app.delete("/api/pedidos/:id", authenticate, PedidoController.borrar_pedido);
 
 }
