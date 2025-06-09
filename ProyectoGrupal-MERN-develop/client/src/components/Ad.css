@@ -51,12 +51,9 @@
 .center {
    display: flex;
    justify-content: center;
-   /* Centra horizontalmente */
    align-items: center;
-   /* Centra verticalmente */
    height: 10vh;
-   /* Ajusta la altura según tus necesidades */
-   padding-left: 40%;
+   padding-left: 20%;
 }
 
 
