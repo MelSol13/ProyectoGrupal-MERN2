@@ -17,7 +17,7 @@ import Contact from "./components/Contact";
 
 const App = () =>{
   return(
-    <div className="container">
+    <div className="app-wrapper">
       <Routes>
         <Route path="/" exact element={<Principal/>} />
         <Route path="/admin" exact element={<Admin/>} />
