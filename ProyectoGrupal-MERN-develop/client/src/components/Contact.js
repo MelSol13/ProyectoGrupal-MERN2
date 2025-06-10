@@ -52,12 +52,12 @@ const Contant = () => {
           <div className="resume-section-content">
             <div className="rowa">
               <div className="col-12 col-md-6">
-                <h3 className="mb-0">
+                <h3 className="mb-0 mt-4">
                   Grupo MERN
                   <span className="text-danger"> CodingDojo</span>
                 </h3>
 
-                <h4 className="mt-2"> Costa Rica</h4>
+                <h4 className="mt-2 mb-4"> Costa Rica</h4>
 
                 <a className="lista-correos " href="mailto:name@email.com">
                   maryzambrana98@gmail.com
@@ -79,7 +79,7 @@ const Contant = () => {
                   m.solanof13@gmail.com
                 </a>
 
-                <ul className=" list-group list-group-horizontal list-unstyled ">
+                <ul className=" list-group list-group-horizontal list-unstyled mt-5 ">
                   <li>
                   <a href="https://www.linkedin.com/in/hellen-camacho-2997b31b4/"><img className="rounded-circle" src={imghellen} width="80" height="80" alt="imghellen"/></a>
                   </li>
@@ -138,8 +138,8 @@ const Contant = () => {
         <section className="resume-section" id="education">
           <div className="resume-section-content">
             <h2 className="mb-5">Education</h2>
-            <div className="d-flex flex-column flex-md-row justify-content-between mb-5">
-              <div className="flex-grow-1">
+            <div className="d-flex flex-column flex-md-row gap-5 mb-5 ms-md-3">
+              <div className="flex-grow-0">
                 <h3 className="mb-0">CodingDojo</h3>
                 <div className="subheading mb-3">
                   MERN
@@ -153,7 +153,7 @@ const Contant = () => {
         </section>
         <hr className="m-0" />
         {/* Skills*/}
-        <section className="resume-section" id="skills">
+        <section className="resume-section ms-md-3" id="skills">
           <div className="resume-section-content">
             <h2 className="mb-5">Skills</h2>
             <div className="subheading mb-3">
