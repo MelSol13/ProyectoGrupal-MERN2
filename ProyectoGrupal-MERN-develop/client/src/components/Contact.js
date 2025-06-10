@@ -136,9 +136,9 @@ const Contant = () => {
         <hr className="m-0" />
         {/* Education*/}
         <section className="resume-section" id="education">
-          <div className="resume-section-content">
+          <div className="resume-section-content ms-md-3">
             <h2 className="mb-5">Education</h2>
-            <div className="d-flex flex-column flex-md-row gap-5 mb-5 ms-md-3">
+            <div className="d-flex flex-column flex-md-row gap-5 mb-4">
               <div className="flex-grow-0">
                 <h3 className="mb-0">CodingDojo</h3>
                 <div className="subheading mb-3">
@@ -153,7 +153,7 @@ const Contant = () => {
         </section>
         <hr className="m-0" />
         {/* Skills*/}
-        <section className="resume-section ms-md-3" id="skills">
+        <section className="resume-section ms-md-3 mt-3" id="skills">
           <div className="resume-section-content">
             <h2 className="mb-5">Skills</h2>
             <div className="subheading mb-3">
@@ -187,7 +187,7 @@ const Contant = () => {
               <li className="list-inline-item">
                 <img src={img4} alt="Mi Icono" />
               </li>
-              <Link to="/" className="btn btn-primary" style={{ marginLeft: "515px", clear: "both", fontWeight: 'bold', fontSize: '19px', marginTop: '40px' }}>
+              <Link to="/" className="btn btn-primary" style={{ marginLeft: "515px", clear: "both", fontWeight: 'bold', fontSize: '19px', marginTop: '40px', marginBottom: '20px' }}>
                 Volver a la Principal
               </Link>
             </ul>
