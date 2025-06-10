@@ -36,6 +36,7 @@
 .containerper {
    width: 1500px;
    margin-left: 1;
+   margin-top: 20px;
 
 }
 
@@ -53,7 +54,6 @@
    justify-content: center;
    align-items: center;
    height: 10vh;
-   padding-left: 20%;
 }
 
 
@@ -172,4 +172,16 @@ a {
 .img-admin{
    max-width: 350px;
    max-height: 300px;
+}
+
+.foo{
+   display: flex;
+   flex-direction: row;
+}
+
+.click-gif{
+   width: 40px;
+   transform: rotate(-30deg);
+   margin-left: -20px;
+   margin-top: 8px;
 }

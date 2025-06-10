@@ -30,6 +30,9 @@ const Footer = () => {
                 height="40"
               />
             </Link>
+            <div>
+                <img className="click-gif" src="https://media.tenor.com/4Y0W2xcjgXUAAAAi/click-clicking.gif" alt="click-gif"/>
+            </div>
           </div>
         </div>
       </div>
