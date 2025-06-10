@@ -136,7 +136,7 @@ const Contant = () => {
         <hr className="m-0" />
         {/* Education*/}
         <section className="resume-section" id="education">
-          <div className="resume-section-content ms-md-3">
+          <div className="resume-section-content ms-md-3 mt-3">
             <h2 className="mb-5">Education</h2>
             <div className="d-flex flex-column flex-md-row gap-5 mb-4">
               <div className="flex-grow-0">
