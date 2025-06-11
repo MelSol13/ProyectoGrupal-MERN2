@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ProyectoGrupal-MERN2/static/css/main.caa3332b.css",
-    "main.js": "/ProyectoGrupal-MERN2/static/js/main.0622a8a1.js",
+    "main.js": "/ProyectoGrupal-MERN2/static/js/main.6fc39518.js",
     "static/js/787.c4e7f8f9.chunk.js": "/ProyectoGrupal-MERN2/static/js/787.c4e7f8f9.chunk.js",
     "static/media/cart-unscreen.gif": "/ProyectoGrupal-MERN2/static/media/cart-unscreen.a3a1e7ff0a6df5a916d3.gif",
     "static/media/fon.jpg": "/ProyectoGrupal-MERN2/static/media/fon.9ffa622d605757fb6048.jpg",
@@ -13,11 +13,11 @@
     "static/media/imgpatricia.jpeg": "/ProyectoGrupal-MERN2/static/media/imgpatricia.e9d6b07582fb10cf036a.jpeg",
     "index.html": "/ProyectoGrupal-MERN2/index.html",
     "main.caa3332b.css.map": "/ProyectoGrupal-MERN2/static/css/main.caa3332b.css.map",
-    "main.0622a8a1.js.map": "/ProyectoGrupal-MERN2/static/js/main.0622a8a1.js.map",
+    "main.6fc39518.js.map": "/ProyectoGrupal-MERN2/static/js/main.6fc39518.js.map",
     "787.c4e7f8f9.chunk.js.map": "/ProyectoGrupal-MERN2/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.caa3332b.css",
-    "static/js/main.0622a8a1.js"
+    "static/js/main.6fc39518.js"
   ]
 }
