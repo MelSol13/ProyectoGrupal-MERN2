@@ -32,11 +32,15 @@ function IniciarSesion() {
             .then(res => {
             console.log(res);
             if (res.data.error) {
-                const message = res.data.message.toLowerCase();
+                const message = res.data.message
+                .toLowerCase()
+                .normalize("NFD")
+                .replace(/[\u0300-\u036f]/g, "");
+
                 if (
-                        message.includes("correo electrónico incorrecto") ||
+                        message.includes("correo electronico incorrecto") ||
                         message.includes("correo no registrado") ||
-                        message.includes("correo inválido")
+                        message.includes("correo invalido")
                     ) {
                         Swal.fire({
                             icon: 'error',
