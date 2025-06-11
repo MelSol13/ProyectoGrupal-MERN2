@@ -109,22 +109,22 @@ function CrearCuenta() {
                     <form onSubmit={registro}>
                         <div className='form-group mb-3'>
                             <label htmlFor="firstName">Nombre:</label>
-                            <input type="text" name="firstName" id="firstName" className="form-control" value={firstName} onChange={(e) => setFirstName(e.target.value)} required />
+                            <input type="text" name="firstName" id="firstName" className="form-control" value={firstName} onChange={(e) => setFirstName(e.target.value)}  />
                             {errors.firstName ? <span className='text-danger'>{errors.firstName.message}</span> : null}
                         </div>
                         <div className='form-group mb-3'>
                             <label htmlFor='lastName'>Apellido:</label>
-                            <input type="text" name="lastName" id="lastName" className="form-control" value={lastName} onChange={(e) => setLastName(e.target.value)} required />
+                            <input type="text" name="lastName" id="lastName" className="form-control" value={lastName} onChange={(e) => setLastName(e.target.value)}  />
                             {errors.lastName ? <span className='text-danger'>{errors.lastName.message}</span> : null}
                         </div>
                         <div className='form-group mb-3'>
                             <label htmlFor='email'>Email:</label>
-                            <input type="email" name="email" id="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                            <input type="email" name="email" id="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
                             {errors.email ? <span className='text-danger'>{errors.email.message}</span> : null}
                         </div>
                         <div className='form-group4 mb-3'>
                             <label>Tipo:</label>
-                            <select name="type" value={type === null ? "DEFAULT" : type.toString()} onChange={e => setType(e.target.value === 'true')} required >
+                            <select name="type" value={type === null ? "DEFAULT" : type.toString()} onChange={e => setType(e.target.value === 'true')} >
                                 <option value="DEFAULT" disabled>Seleccione uno</option>
                                 <option value= "true" >Cliente</option>
                                 <option value="false" >Emprendedor</option>
@@ -133,12 +133,12 @@ function CrearCuenta() {
                         </div>
                         <div className='form-group mb-3'>
                             <label htmlFor='password'>Contraseña:</label>
-                            <input type="password" name="password" id="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                            <input type="password" name="password" id="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)}/>
                             {errors.password ? <span className='text-danger'>{errors.password.message}</span> : null}
                         </div>
                         <div className='form-group mb-4'>
                             <label htmlFor='confirmPassword'>Confirmar Contraseña:</label>
-                            <input type="password" name="confirmPassword" id="confirmPassword" className="form-control mb-3" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+                            <input type="password" name="confirmPassword" id="confirmPassword" className="form-control mb-3" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
                             {errors.confirmPassword ? <span className='text-danger'>{errors.confirmPassword.message}</span> : null}
                         </div>
                         <input type="submit" value="Registrarme" id="regis" className='btn btn-success mb-3' />
