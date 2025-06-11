@@ -47,7 +47,7 @@ function IniciarSesion() {
                             title: 'Correo incorrecto',
                             text: 'El correo electrónico ingresado no es válido o no está registrado.'
                         });
-                    } else if (message.includes("contraseña incorrecta")) {
+                    } else if (message.includes("contrasena incorrecta")) {
                         Swal.fire({
                             icon: 'error',
                             title: 'Contraseña incorrecta',
