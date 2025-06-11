@@ -64,7 +64,7 @@ const CrearSitio = () => {
         }
 
 
-        axios.post(`${API_BASE_URL}/api/sitios`, {
+        axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/sitios`, {
             nombre,
             url,
             categoria,

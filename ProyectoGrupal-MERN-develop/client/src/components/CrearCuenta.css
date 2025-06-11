@@ -1,15 +1,17 @@
 .cuenta{
     width: 100vw;
-    height: 50vw;
+    min-height: 100vh;
     padding-top: 80px;
     background: url(https://img.freepik.com/free-vector/watercolor-background_220290-34.jpg?size=626&ext=jpg&ga=GA1.1.556705.1695271294);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .row1{
-    margin-top: 100px;
-    margin-left: 300px;
+    max-width: 900px;
+    margin: 100px auto 0 650px;
+    padding: 0 20px;
     
 }
 

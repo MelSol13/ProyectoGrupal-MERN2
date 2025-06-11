@@ -23,18 +23,26 @@ module.exports.register = (req, res) => {
 
         })
         .catch(err => {
-            if (err.name === "ValidationError") {
-                const errors = {};
-                for (let field in err.errors) {
-                    errors[field] = err.errors[field].message;
-                }
-                console.log("Errores de validación del backend:", errors); 
-                return res.status(400).json({ errors });
-            }
+        console.log("Error recibido en backend:", err);
 
-            console.error("Error inesperado:", JSON.stringify(err, null, 2));
-            res.status(500).json({ message: "Error del servidor." });
-        });
+        if (err.name === "ValidationError") {
+            const errors = {};
+            for (let field in err.errors) {
+                errors[field] = err.errors[field].message;
+            }
+            console.log("Errores de validación del backend:", errors); 
+            return res.status(400).json({ errors });
+        }
+
+        console.log("Código de error:", err.code, "Tipo:", typeof err.code);
+        if (err && err.code && Number(err.code) === 11000) {
+            console.log("Error de duplicado detectado:", err.keyValue);
+            return res.status(409).json({ message: "Correo ya registrado" });
+        }
+
+        console.error("Error inesperado:", err);
+        res.status(500).json({ message: "Error del servidor." });
+    });
 }
 
 module.exports.login = (req, res) => {

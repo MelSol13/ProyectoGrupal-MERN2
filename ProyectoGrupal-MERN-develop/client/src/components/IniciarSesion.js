@@ -26,7 +26,6 @@ function IniciarSesion() {
                 } else if (res.data.type === 1) {
                         navigate("/admin")
                 } else {
-                        // Pasa el nombre y apellidos del usuario al navegar a CrearSitio.js
                         navigate("/crearsitio", { state: { userName: res.data.userName, userLastName: res.data.lastName } });
                         const userName = res.data.userName;
                         UserName = userName;
@@ -42,13 +41,13 @@ function IniciarSesion() {
                 <div className='col-3'></div>
                 <h1 className='inic-tit'>Bienvenido Nuevamente!</h1>
                 <form className="form-inic" onSubmit={login}>
-                    <div className='form-group'>
+                    <div className='form-group mb-3'>
                         <label htmlFor="emailLogin">Email:</label>
                         <input type="email" name="emailLogin" id="emailLogin" className="form-control" value={emailLogin} onChange={(e) => setEmailLogin(e.target.value)} />
                     </div>
                     <div>
                         <label htmlFor="passwordLogin">Contraseña:</label>
-                        <input type="password" id="passwordLogin" className="form-control mb-3" value={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} />
+                        <input type="password" id="passwordLogin" className="form-control mb-4" value={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} />
                     </div>
                     <div>
                         {errorsLogin !== "" ? <span className='text-danger'>{errorsLogin}</span> : null}

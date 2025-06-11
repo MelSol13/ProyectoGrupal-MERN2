@@ -1,16 +1,17 @@
 .sesion{
     width: 100vw;
-    height: 50vw;
+    min-height: 100vh;
     padding-top: 80px;
     background: url("https://s0.smartresize.com/wallpaper/737/463/HD-wallpaper-abstract-pink-patterned-background-vector-premium-nunny-vector-background-pattern-abstract-background-background-patterns-peach-abstract.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 .row2{
-    margin-top: 100px;
-    margin-left: 100px;
-    margin-right: 800px;
+    margin: 100px auto 0 auto ;
+    padding: 0 20px;
+    max-width: 900px;
 }
 
 .inic-tit{
