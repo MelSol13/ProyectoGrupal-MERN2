@@ -62,7 +62,7 @@ module.exports.login = (req, res) => {
                             const response = {
                                 error: false,
                                 message: "Inicio de sesión correcto.",
-                                userName: user.firstName + ' ' + user.lastName, // Nombre de usuario
+                                userName: user.firstName + ' ' + user.lastName, 
                                 type: user.type ? 1 : 0 
                             };
 

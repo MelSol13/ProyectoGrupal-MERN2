@@ -22,14 +22,18 @@ function CrearCuenta() {
     const registro = e => {
         e.preventDefault();
 
-        if (
-            !firstName.trim() ||
-            !lastName.trim() ||
-            !email.trim() ||
-            !password.trim() ||
-            !confirmPassword.trim() ||
-            (type === null)
-            ) {
+        const newErrors = {
+            firstName: !firstName.trim() ? { message: 'Este campo es requerido' } : null,
+            lastName: !lastName.trim() ? { message: 'Este campo es requerido' } : null,
+            email: !email.trim() ? { message: 'Este campo es requerido' } : null,
+            password: !password.trim() ? { message: 'Este campo es requerido' } : null,
+            confirmPassword: !confirmPassword.trim() ? { message: 'Este campo es requerido' } : null,
+            type: type === null ? { message: 'Debe seleccionar un tipo' } : null,
+        };
+
+        setErrors(newErrors);
+
+        if (Object.values(newErrors).some(error => error !== null)) {
             Swal.fire({
                 icon: 'warning',
                 title: 'Campos incompletos',
@@ -109,37 +113,60 @@ function CrearCuenta() {
                     <form onSubmit={registro}>
                         <div className='form-group mb-3'>
                             <label htmlFor="firstName">Nombre:</label>
-                            <input type="text" name="firstName" id="firstName" className="form-control" value={firstName} onChange={(e) => setFirstName(e.target.value)}  />
-                            {errors.firstName ? <span className='text-danger'>{errors.firstName.message}</span> : null}
+                            <input type="text" name="firstName" id="firstName" className={`form-control mb-2 ${errors.firstName ? 'input-error' : ''}`}
+                            value={firstName} onChange={(e) => {setFirstName(e.target.value);
+                                if (errors.firstName) setErrors(prev => ({ ...prev, firstName: null })); 
+                                }}/>
+                            {errors.firstName && <small className="error-text">{errors.firstName.message}</small>}
                         </div>
                         <div className='form-group mb-3'>
                             <label htmlFor='lastName'>Apellido:</label>
-                            <input type="text" name="lastName" id="lastName" className="form-control" value={lastName} onChange={(e) => setLastName(e.target.value)}  />
-                            {errors.lastName ? <span className='text-danger'>{errors.lastName.message}</span> : null}
+                            <input type="text" name="lastName" id="lastName" className={`form-control mb-2 ${errors.lastName ? 'input-error' : ''}`}
+                            value={lastName} onChange={(e) => {setLastName(e.target.value);
+                                if (errors.lastName) setErrors(prev => ({ ...prev, lastName: null })); 
+                                }}/>
+                            {errors.lastName && <small className="error-text">{errors.lastName.message}</small>}
                         </div>
                         <div className='form-group mb-3'>
                             <label htmlFor='email'>Email:</label>
-                            <input type="email" name="email" id="email" className="form-control" value={email} onChange={(e) => setEmail(e.target.value)} />
-                            {errors.email ? <span className='text-danger'>{errors.email.message}</span> : null}
+                            <input type="text" name="email" id="email" className={`form-control mb-2 ${errors.email ? 'input-error' : ''}`}
+                            value={email} onChange={(e) => {setEmail(e.target.value);
+                                if (errors.email) setErrors(prev => ({ ...prev, email: null })); 
+                                }}/>
+                            {errors.email && <small className="error-text">{errors.email.message}</small>}
                         </div>
                         <div className='form-group4 mb-3'>
                             <label>Tipo:</label>
-                            <select name="type" value={type === null ? "DEFAULT" : type.toString()} onChange={e => setType(e.target.value === 'true')} >
-                                <option value="DEFAULT" disabled>Seleccione uno</option>
-                                <option value= "true" >Cliente</option>
-                                <option value="false" >Emprendedor</option>
+                            <select
+                            name="type" className={`form-control mb-2 ${errors.type ? 'input-error' : ''}`}
+                            value={type === null ? "DEFAULT" : type.toString()}
+                            onChange={e => {
+                                const value = e.target.value;
+                                setType(value === 'true' ? true : value === 'false' ? false : null);
+                                if (errors.type) setErrors(prev => ({ ...prev, type: null }));
+                            }}
+                            >
+                            <option value="DEFAULT" disabled>Seleccione uno</option>
+                            <option value="true">Cliente</option>
+                            <option value="false">Emprendedor</option>
                             </select>
-                            {errors.type ? <span className='text-danger'>{errors.type.message}</span> : null}
+                            {errors.type && <small className="error-text">{errors.type.message}</small>}
                         </div>
                         <div className='form-group mb-3'>
                             <label htmlFor='password'>Contraseña:</label>
-                            <input type="password" name="password" id="password" className="form-control" value={password} onChange={(e) => setPassword(e.target.value)}/>
-                            {errors.password ? <span className='text-danger'>{errors.password.message}</span> : null}
+                            <input type="password" name="password" id="password" className={`form-control mb-2 ${errors.password ? 'input-error' : ''}`}
+                            value={password} onChange={(e) => {setPassword(e.target.value);
+                                if (errors.password) setErrors(prev => ({ ...prev, password: null })); 
+                                }}/>
+                            {errors.password && <small className="error-text">{errors.password.message}</small>}
                         </div>
                         <div className='form-group mb-4'>
                             <label htmlFor='confirmPassword'>Confirmar Contraseña:</label>
-                            <input type="password" name="confirmPassword" id="confirmPassword" className="form-control mb-3" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
-                            {errors.confirmPassword ? <span className='text-danger'>{errors.confirmPassword.message}</span> : null}
+                            <input type="password" name="confirmPassword" id="confirmPassword" className={`form-control mb-2 ${errors.confirmPassword ? 'input-error' : ''}`}
+                            value={confirmPassword} onChange={(e) => {setConfirmPassword(e.target.value);
+                                if (errors.confirmPassword) setErrors(prev => ({ ...prev, confirmPassword: null })); 
+                                }}/>
+                            {errors.confirmPassword && <small className="error-text">{errors.confirmPassword.message}</small>}
                         </div>
                         <input type="submit" value="Registrarme" id="regis" className='btn btn-success mb-3' />
                     </form>

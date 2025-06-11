@@ -43,3 +43,15 @@
     border: none;
     border-radius: 5px;
 }
+
+.input-error {
+    border: 1px solid red !important;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: block;
+}

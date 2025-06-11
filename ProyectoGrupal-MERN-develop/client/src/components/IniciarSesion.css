@@ -31,3 +31,20 @@
     background-color: rgb(206, 135, 110);
     box-shadow: 5px 5px 7px rgb(156, 54, 16);
 }
+
+.bot-inic:hover {
+    background-color: rgb(184, 100, 70);
+    color: white;                        
+    box-shadow: 3px 3px 10px rgb(90, 30, 10); 
+}
+
+.input-error {
+    border: 1px solid red !important;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}

@@ -187,7 +187,7 @@ const Contant = () => {
               <li className="list-inline-item">
                 <img src={img4} alt="Mi Icono" />
               </li>
-              <Link to="/" className="btn btn-primary" style={{ marginLeft: "515px", clear: "both", fontWeight: 'bold', fontSize: '19px', marginTop: '40px', marginBottom: '20px' }}>
+              <Link to="/" className="btn btn-primary" style={{ marginLeft: "620px", clear: "both", fontWeight: 'bold', fontSize: '19px', marginTop: '40px', marginBottom: '20px' }}>
                 Volver a la Principal
               </Link>
             </ul>
