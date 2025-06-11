@@ -10,7 +10,6 @@ const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 function IniciarSesion() {
     const [emailLogin, setEmailLogin] = useState('');
     const [passwordLogin, setPasswordLogin] = useState('');
-    const [errorsLogin, setErrorsLogin] = useState('');
 
     const navigate = useNavigate();
 
@@ -34,31 +33,29 @@ function IniciarSesion() {
             console.log(res);
             if (res.data.error) {
                 const message = res.data.message.toLowerCase();
-                if (message.includes("correo no registrado")) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Correo no registrado',
-                        text: 'El correo electrónico no está registrado en el sistema.'
-                    });
-                } else if (message.includes("contraseña incorrecta")) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Contraseña incorrecta',
-                        text: 'La contraseña ingresada es incorrecta.'
-                    });
-                } else if (message.includes("correo electrónico inválido")) {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Correo electrónico inválido',
-                        text: 'Por favor, ingrese un correo electrónico válido.'
-                    });
-                } else {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Error',
-                        text: res.data.message
-                    });
-                }
+                if (
+                        message.includes("correo electrónico incorrecto") ||
+                        message.includes("correo no registrado") ||
+                        message.includes("correo inválido")
+                    ) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Correo incorrecto',
+                            text: 'El correo electrónico ingresado no es válido o no está registrado.'
+                        });
+                    } else if (message.includes("contraseña incorrecta")) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Contraseña incorrecta',
+                            text: 'La contraseña ingresada es incorrecta.'
+                        });
+                    } else {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: res.data.message
+                        });
+                    }
             } else if (res.data.type === 1) {
                 navigate("/admin");
             } else {
@@ -94,9 +91,6 @@ function IniciarSesion() {
                     <div>
                         <label htmlFor="passwordLogin">Contraseña:</label>
                         <input type="password" id="passwordLogin" className="form-control mb-4" value={passwordLogin} onChange={(e) => setPasswordLogin(e.target.value)} />
-                    </div>
-                    <div>
-                        {errorsLogin !== "" ? <span className='text-danger'>{errorsLogin}</span> : null}
                     </div>
                     <input type="submit" value="Iniciar Sesión" className='bot-inic' />
                 </form>
