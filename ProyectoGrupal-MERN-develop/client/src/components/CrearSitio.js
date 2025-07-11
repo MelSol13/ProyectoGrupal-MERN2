@@ -139,97 +139,99 @@ const CrearSitio = () => {
                 </div>
             </nav>
             <img src={imagen} id='imagen-princ' className='animate__animated animate__jello' alt="Imagen predeterminada" />
-            <div className='row'>
-                <h1 className='titulo'>Diseña a tu gusto</h1>
-                <form className='form' onSubmit={guardarSitio}>
-                    <div className='col-md-4'>
-                        <div className='form-group'>
-                            <label>Nombre del sitio:</label>
-                            <input type="text" placeholder='Ingresar nombre del sitio' name="nombre " className="form-control" value={nombre} onChange={e => setNombre(e.target.value)} />
-                            {errores.nombre ? <span className='text-danger'>{errores.nombre.message}</span> : null}
+            <div className='container-form'>
+                <div className='row'>
+                    <h1 className='titulo'>Diseña a tu gusto</h1>
+                    <form className='form' onSubmit={guardarSitio}>
+                        <div className='col-md-4'>
+                            <div className='form-group'>
+                                <label>Nombre del sitio:</label>
+                                <input type="text" placeholder='Ingresar nombre del sitio' name="nombre " className="form-control" value={nombre} onChange={e => setNombre(e.target.value)} />
+                                {errores.nombre ? <span className='text-danger'>{errores.nombre.message}</span> : null}
+                            </div>
+                            <div>
+                                <label>Categoría:</label>
+                                <Select options={opcionesCategorias} value={categoria} onChange={(opcionSeleccionada) => setCategoria(opcionSeleccionada)} />
+                            </div>
+                            <div className='form-group'>
+                                <label>URL:</label>
+                                <input type="text" placeholder='Ingresar su URL única' className="form-control" value={url} onChange={(e) => setUrl(e.target.value)} />
+                                {errores.url ? <span className='text-danger'>{errores.url.message}</span> : null}
+                            </div>
+                            <div className='form-group'>
+                                <label>Logo: </label>
+                                <input type="file" id="file" className="form-control" onChange={(e) => fileHandler(e, 'logo')} />
+                                {errores.logo ? <span className='text-danger'>{errores.logo.message}</span> : null}
+                            </div>
+                            <div className='form-group'>
+                                <label>Imagen 1:</label>
+                                <input type="file" className="form-control" onChange={(e) => fileHandler(e, 0)} />
+                            </div>
+                            <div className='form-group'>
+                                <label>Imagen 2:</label>
+                                <input type="file" className="form-control" onChange={(e) => fileHandler(e, 1)} />
+                            </div>
+                            <div className='form-group'>
+                                <label>Imagen 3:</label>
+                                <input type="file" className="form-control" onChange={(e) => fileHandler(e, 2)} />
+                            </div>
+                            <div className='form-group'>
+                                <label>Eslogan:</label>
+                                <input type="text" placeholder='Ingresar su eslogan' className="form-control" value={eslogan} onChange={(e) => setEslogan(e.target.value)} />
+                                {errores.eslogan ? <span className='text-danger'>{errores.eslogan.message}</span> : null}
+                            </div>
+                            <div className='form-group'>
+                                <label>Descripción:</label>
+                                <textarea className="form-control" placeholder='Ingresar una descripcion' value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
+                                {errores.descripcion ? <span className='text-danger'>{errores.descripcion.message}</span> : null}
+                            </div>
+                            <div className='form-group'>
+                                <label>Servicio 1:</label>
+                                <input type="text" className="form-control" value={servicio1} onChange={(e) => setServicio1(e.target.value)} />
+                            </div>
+                            <div className='form-group'>
+                                <label>Servicio 2:</label>
+                                <input type="text" className="form-control" value={servicio2} onChange={(e) => setServicio2(e.target.value)} />
+                            </div>
+                            <div className='form-group'>
+                                <label>Servicio 3:</label>
+                                <input type="text" className="form-control" value={servicio3} onChange={(e) => setServicio3(e.target.value)} />
+                            </div>
+                            <div className='form-group'>
+                                <label>Contacto</label>
+                                <input type="text" className="form-control" value={contacto} onChange={(e) => setContacto(e.target.value)} />
+                            </div>
+                            <div className='form-group'>
+                                <label>Fuente:</label>
+                                <Select className='mb-5' options={fontOptions} value={fontOptions.find(option => option.value === fuenteSeleccionada)} onChange={(selectedOption) => setFuenteSeleccionada(selectedOption.value)}
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <label>Categoría:</label>
-                            <Select options={opcionesCategorias} value={categoria} onChange={(opcionSeleccionada) => setCategoria(opcionSeleccionada)} />
+                        <div className='col-md-6'>
+                            <h2 className='titulo-colores1'>Elegir Colores:</h2>
+                            <div>
+                                <label>Barra Superior:</label>
+                                <ChromePicker className="color-barra mb-4" color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
+                            </div>
+                            <div>
+                                <label>Fondo:</label>
+                                <ChromePicker className="color-fondo mb-4" color={colorFondo} onChange={(color) => setColorFondo(color.hex)} />
+                            </div>
+                            <div>
+                                <label>Información:</label>
+                                <ChromePicker className="color-informacion mb-4" color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
+                            </div>
+                            <div>
+                                <button type="submit" className="btn-vista1" onClick={guardarSitio}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-eye-fill" viewBox="0 0 16 16">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                </svg>
+                                    Vista Previa
+                                </button>
+                            </div>
                         </div>
-                        <div className='form-group'>
-                            <label>URL:</label>
-                            <input type="text" placeholder='Ingresar su URL única' className="form-control" value={url} onChange={(e) => setUrl(e.target.value)} />
-                            {errores.url ? <span className='text-danger'>{errores.url.message}</span> : null}
-                        </div>
-                        <div className='form-group'>
-                            <label>Logo: </label>
-                            <input type="file" id="file" className="form-control" onChange={(e) => fileHandler(e, 'logo')} />
-                            {errores.logo ? <span className='text-danger'>{errores.logo.message}</span> : null}
-                        </div>
-                        <div className='form-group'>
-                            <label>Imagen 1:</label>
-                            <input type="file" className="form-control" onChange={(e) => fileHandler(e, 0)} />
-                        </div>
-                        <div className='form-group'>
-                            <label>Imagen 2:</label>
-                            <input type="file" className="form-control" onChange={(e) => fileHandler(e, 1)} />
-                        </div>
-                        <div className='form-group'>
-                            <label>Imagen 3:</label>
-                            <input type="file" className="form-control" onChange={(e) => fileHandler(e, 2)} />
-                        </div>
-                        <div className='form-group'>
-                            <label>Eslogan:</label>
-                            <input type="text" placeholder='Ingresar su eslogan' className="form-control" value={eslogan} onChange={(e) => setEslogan(e.target.value)} />
-                            {errores.eslogan ? <span className='text-danger'>{errores.eslogan.message}</span> : null}
-                        </div>
-                        <div className='form-group'>
-                            <label>Descripción:</label>
-                            <textarea className="form-control" placeholder='Ingresar una descripcion' value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
-                            {errores.descripcion ? <span className='text-danger'>{errores.descripcion.message}</span> : null}
-                        </div>
-                        <div className='form-group'>
-                            <label>Servicio 1:</label>
-                            <input type="text" className="form-control" value={servicio1} onChange={(e) => setServicio1(e.target.value)} />
-                        </div>
-                        <div className='form-group'>
-                            <label>Servicio 2:</label>
-                            <input type="text" className="form-control" value={servicio2} onChange={(e) => setServicio2(e.target.value)} />
-                        </div>
-                        <div className='form-group'>
-                            <label>Servicio 3:</label>
-                            <input type="text" className="form-control" value={servicio3} onChange={(e) => setServicio3(e.target.value)} />
-                        </div>
-                        <div className='form-group'>
-                            <label>Contacto</label>
-                            <input type="text" className="form-control" value={contacto} onChange={(e) => setContacto(e.target.value)} />
-                        </div>
-                        <div className='form-group'>
-                            <label>Fuente:</label>
-                            <Select className='mb-5' options={fontOptions} value={fontOptions.find(option => option.value === fuenteSeleccionada)} onChange={(selectedOption) => setFuenteSeleccionada(selectedOption.value)}
-                            />
-                        </div>
-                    </div>
-                    <div className='col-md-6'>
-                        <h2 className='titulo-colores1'>Elegir Colores:</h2>
-                        <div>
-                            <label>Barra Superior:</label>
-                            <ChromePicker className="color-barra mb-4" color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
-                        </div>
-                        <div>
-                            <label>Fondo:</label>
-                            <ChromePicker className="color-fondo mb-4" color={colorFondo} onChange={(color) => setColorFondo(color.hex)} />
-                        </div>
-                        <div>
-                            <label>Información:</label>
-                            <ChromePicker className="color-informacion mb-4" color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
-                        </div>
-                        <div>
-                            <button type="submit" className="btn-vista1" onClick={guardarSitio}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-eye-fill" viewBox="0 0 16 16">
-                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-                            </svg>
-                                Vista Previa
-                            </button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     );
