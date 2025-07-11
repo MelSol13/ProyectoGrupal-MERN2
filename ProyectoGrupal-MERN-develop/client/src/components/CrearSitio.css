@@ -24,7 +24,7 @@
 
 #imagen-princ{
     margin-top: 50px;
-    margin-left: 300px;
+    margin-left: 350px;
     margin-bottom: 50px;
     width: 1130px;
     height: 450px;
@@ -35,10 +35,13 @@
     --animate-duration: 7s;
 }
 
-.titulo{
-    color:  rgba(18, 111, 125, 0.944);
+.titulos-form{
     padding-left: 450px;
     margin-top: 30px;
+}
+
+.titulo{
+    color:  rgba(18, 111, 125, 0.944);
 }
 
 .btn-vista1{

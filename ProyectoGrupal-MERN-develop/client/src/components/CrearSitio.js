@@ -141,7 +141,10 @@ const CrearSitio = () => {
             <img src={imagen} id='imagen-princ' className='animate__animated animate__jello' alt="Imagen predeterminada" />
             <div className='container-form'>
                 <div className='row'>
-                    <h1 className='titulo'>Diseña a tu gusto</h1>
+                    <div className='titulos-form'>
+                        <h1 className='titulo'>Diseña a tu gusto</h1>
+                        <h1 className='titulo-colores1'>Elegir Colores:</h1>
+                    </div>
                     <form className='form' onSubmit={guardarSitio}>
                         <div className='col-md-4'>
                             <div className='form-group'>
@@ -208,7 +211,6 @@ const CrearSitio = () => {
                             </div>
                         </div>
                         <div className='col-md-6'>
-                            <h2 className='titulo-colores1'>Elegir Colores:</h2>
                             <div>
                                 <label>Barra Superior:</label>
                                 <ChromePicker className="color-barra mb-4" color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
