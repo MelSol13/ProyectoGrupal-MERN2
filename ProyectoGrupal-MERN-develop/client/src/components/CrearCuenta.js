@@ -38,12 +38,22 @@ function CrearCuenta() {
         setErrors(newErrors);
 
         if (Object.values(newErrors).some(error => error !== null)) {
+
+        if (newErrors.password?.message === 'La contraseña debe tener al menos 8 caracteres') {
             Swal.fire({
                 icon: 'warning',
-                title: 'Campos incompletos',
-                text: 'Por favor, complete todos los campos antes de continuar.'
+                title: 'Contraseña inválida',
+                text: 'La contraseña debe tener al menos 8 caracteres.'
             });
-            return;
+        }
+
+        Swal.fire({
+            icon: 'warning',
+            title: 'Campos incompletos',
+            text: 'Por favor, complete todos los campos antes de continuar.'
+        });
+
+        return;
         }
 
         axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/register`, {
