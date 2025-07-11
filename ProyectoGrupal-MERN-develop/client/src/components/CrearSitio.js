@@ -148,79 +148,79 @@ const CrearSitio = () => {
                     <form className='form' onSubmit={guardarSitio}>
                         <div className='col-md-4'>
                             <div className='form-group mb-3'>
-                                <label>Nombre del sitio:</label>
+                                <label className='mb-2'>Nombre del sitio:</label>
                                 <input type="text" placeholder='Ingresar nombre del sitio' name="nombre " className="form-control" value={nombre} onChange={e => setNombre(e.target.value)} />
                                 {errores.nombre ? <span className='text-danger'>{errores.nombre.message}</span> : null}
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Categoría:</label>
+                                <label className='mb-2'>Categoría:</label>
                                 <Select options={opcionesCategorias} value={categoria} onChange={(opcionSeleccionada) => setCategoria(opcionSeleccionada)} />
                             </div>
                             <div className='form-group mb-3'>
-                                <label>URL:</label>
+                                <label className='mb-2'>URL:</label>
                                 <input type="text" placeholder='Ingresar su URL única' className="form-control" value={url} onChange={(e) => setUrl(e.target.value)} />
                                 {errores.url ? <span className='text-danger'>{errores.url.message}</span> : null}
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Logo: </label>
+                                <label className='mb-2'>Logo: </label>
                                 <input type="file" id="file" className="form-control" onChange={(e) => fileHandler(e, 'logo')} />
                                 {errores.logo ? <span className='text-danger'>{errores.logo.message}</span> : null}
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Imagen 1:</label>
+                                <label className='mb-2'>Imagen 1:</label>
                                 <input type="file" className="form-control" onChange={(e) => fileHandler(e, 0)} />
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Imagen 2:</label>
+                                <label className='mb-2'>Imagen 2:</label>
                                 <input type="file" className="form-control" onChange={(e) => fileHandler(e, 1)} />
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Imagen 3:</label>
+                                <label className='mb-2'>Imagen 3:</label>
                                 <input type="file" className="form-control" onChange={(e) => fileHandler(e, 2)} />
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Eslogan:</label>
+                                <label className='mb-2'>Eslogan:</label>
                                 <input type="text" placeholder='Ingresar su eslogan' className="form-control" value={eslogan} onChange={(e) => setEslogan(e.target.value)} />
                                 {errores.eslogan ? <span className='text-danger'>{errores.eslogan.message}</span> : null}
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Descripción:</label>
+                                <label className='mb-2'>Descripción:</label>
                                 <textarea className="form-control" placeholder='Ingresar una descripcion' value={descripcion} onChange={(e) => setDescripcion(e.target.value)} />
                                 {errores.descripcion ? <span className='text-danger'>{errores.descripcion.message}</span> : null}
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Servicio 1:</label>
+                                <label className='mb-2'>Servicio 1:</label>
                                 <input type="text" className="form-control" value={servicio1} onChange={(e) => setServicio1(e.target.value)} />
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Servicio 2:</label>
+                                <label className='mb-2'>Servicio 2:</label>
                                 <input type="text" className="form-control" value={servicio2} onChange={(e) => setServicio2(e.target.value)} />
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Servicio 3:</label>
+                                <label className='mb-2'>Servicio 3:</label>
                                 <input type="text" className="form-control" value={servicio3} onChange={(e) => setServicio3(e.target.value)} />
                             </div>
                             <div className='form-group mb-3'>
-                                <label>Contacto</label>
+                                <label className='mb-2'>Contacto</label>
                                 <input type="text" className="form-control" value={contacto} onChange={(e) => setContacto(e.target.value)} />
                             </div>
                             <div className='form-group'>
-                                <label>Fuente:</label>
+                                <label className='mb-2'>Fuente:</label>
                                 <Select className='mb-5' options={fontOptions} value={fontOptions.find(option => option.value === fuenteSeleccionada)} onChange={(selectedOption) => setFuenteSeleccionada(selectedOption.value)}
                                 />
                             </div>
                         </div>
                         <div className='col-md-6'>
                             <div>
-                                <label>Barra Superior:</label>
+                                <label className='mb-2'>Barra Superior:</label>
                                 <ChromePicker className="color-barra mb-4" color={colorBarra} onChange={(color) => setColorBarra(color.hex)} />
                             </div>
                             <div>
-                                <label>Fondo:</label>
+                                <label className='mb-2'>Fondo:</label>
                                 <ChromePicker className="color-fondo mb-4" color={colorFondo} onChange={(color) => setColorFondo(color.hex)} />
                             </div>
                             <div>
-                                <label>Información:</label>
+                                <label className='mb-2'>Información:</label>
                                 <ChromePicker className="color-informacion mb-4" color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
                             </div>
                             <div>

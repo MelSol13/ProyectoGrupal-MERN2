@@ -26,9 +26,13 @@ function CrearCuenta() {
             firstName: !firstName.trim() ? { message: 'Este campo es requerido' } : null,
             lastName: !lastName.trim() ? { message: 'Este campo es requerido' } : null,
             email: !email.trim() ? { message: 'Este campo es requerido' } : null,
-            password: !password.trim() ? { message: 'Este campo es requerido' } : null,
-            confirmPassword: !confirmPassword.trim() ? { message: 'Este campo es requerido' } : null,
-            type: type === null ? { message: 'Debe seleccionar un tipo' } : null,
+            password: !password.trim()
+        ? { message: 'Este campo es requerido' }
+        : password.length < 8
+        ? { message: 'La contraseña debe tener al menos 8 caracteres' }
+        : null,
+        confirmPassword: !confirmPassword.trim() ? { message: 'Este campo es requerido' } : null,
+        type: type === null ? { message: 'Debe seleccionar un tipo' } : null,
         };
 
         setErrors(newErrors);
