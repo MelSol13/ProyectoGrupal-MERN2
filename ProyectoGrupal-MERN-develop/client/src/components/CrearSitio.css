@@ -7,21 +7,6 @@
     background-position: center;
 }
 
-.container-form{
-    padding-left: 310px;
-}
-
-.row{
-    margin-left: 310px;
-}
-
-.form{
-    padding-left: 300px;
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
-}
-
 #imagen-princ{
     margin-top: 50px;
     margin-left: 350px;
@@ -40,10 +25,32 @@
     margin-top: 30px;
     display: flex;
     flex-direction: row;
+    gap: 20%;
 }
 
 .titulo{
     color:  rgba(18, 111, 125, 0.944);
+}
+
+.titulo-colores1{
+    font-size: 40px;
+    color: rgb(209, 86, 115);
+    margin-bottom: 40px;
+}
+
+.container-form{
+    padding-left: 310px;
+}
+
+.form{
+    padding-left: 300px;
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+
+.form-group {
+  margin-bottom: 1rem; /* o el espacio que quieras, por ejemplo 16px */
 }
 
 .btn-vista1{
@@ -54,6 +61,7 @@
     background-color: rgb(209, 86, 115);
     margin-top: 50px;
     margin-left: 12px;
+    margin-bottom: 50px;
     width: 200px;
     height: 50px;
     border-radius: 10px;
@@ -64,8 +72,3 @@
     background-color: #e631e6;
 }
 
-.titulo-colores1{
-    font-size: 40px;
-    color: rgb(209, 86, 115);
-    margin-bottom: 40px;
-}
