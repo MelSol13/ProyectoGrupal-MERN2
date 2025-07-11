@@ -31,29 +31,42 @@ function CrearCuenta() {
         : password.length < 8
         ? { message: 'La contraseña debe tener al menos 8 caracteres' }
         : null,
-        confirmPassword: !confirmPassword.trim() ? { message: 'Este campo es requerido' } : null,
+        confirmPassword: !confirmPassword.trim()
+        ? { message: 'Este campo es requerido' }
+        : password !== confirmPassword
+        ? { message: 'Las contraseñas no coinciden' }
+        : null,
         type: type === null ? { message: 'Debe seleccionar un tipo' } : null,
         };
 
         setErrors(newErrors);
 
-        if (Object.values(newErrors).some(error => error !== null)) {
-
-        if (newErrors.password?.message === 'La contraseña debe tener al menos 8 caracteres') {
+                if (newErrors.password?.message === 'La contraseña debe tener al menos 8 caracteres') {
             Swal.fire({
                 icon: 'warning',
                 title: 'Contraseña inválida',
                 text: 'La contraseña debe tener al menos 8 caracteres.'
             });
+            return;
         }
 
-        Swal.fire({
-            icon: 'warning',
-            title: 'Campos incompletos',
-            text: 'Por favor, complete todos los campos antes de continuar.'
-        });
 
-        return;
+        if (newErrors.confirmPassword?.message === 'Las contraseñas no coinciden') {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Confirmación incorrecta',
+                text: 'Las contraseñas no coinciden.'
+            });
+            return;
+        }
+
+        if (Object.values(newErrors).some(error => error !== null)) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Campos incompletos',
+                text: 'Por favor, complete todos los campos antes de continuar.'
+            });
+            return;
         }
 
         axios.post(`${process.env.REACT_APP_API_BASE_URL}/api/register`, {
