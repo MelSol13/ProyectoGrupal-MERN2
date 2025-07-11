@@ -38,6 +38,8 @@
 .titulos-form{
     padding-left: 450px;
     margin-top: 30px;
+    display: flex;
+    flex-direction: row;
 }
 
 .titulo{
