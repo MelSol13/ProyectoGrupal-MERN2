@@ -1,9 +1,14 @@
 .container-2{
-    width: 160%;
+    width: 99vw;
     height: 120%;
     background-image: url(https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGZvbmRvJTIwYWJzdHJhY3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+}
+
+.row{
+    margin-left: 310px;
 }
 
 .form{
@@ -39,16 +44,16 @@
     font-family:cursive;
     background-color: rgb(209, 86, 115);
     margin-top: 50px;
-    margin-left: 50px;
+    margin-left: 12px;
     width: 200px;
     height: 50px;
     border-radius: 10px;
     box-shadow: 5px 5px 7px rgb(216, 89, 169);
 }
 
-  .btn-vista1:hover {
-  background-color: #e631e6;
-  }
+.btn-vista1:hover {
+    background-color: #e631e6;
+}
 
 .titulo-colores1{
     font-size: 40px;
