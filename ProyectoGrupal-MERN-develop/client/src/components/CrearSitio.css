@@ -1,10 +1,12 @@
+
 .container-2{
     width: 99vw;
-    height: 120%;
+    height: auto;
     background-image: url(https://images.unsplash.com/photo-1579546928686-286c9fbde1ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjB8fGZvbmRvJTIwYWJzdHJhY3RvfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-bottom: 100px;
 }
 
 #imagen-princ{
@@ -12,7 +14,7 @@
     margin-left: 350px;
     margin-bottom: 50px;
     width: 1130px;
-    height: 450px;
+    height: auto;
     border-radius: 20px;
 }
 
@@ -39,7 +41,7 @@
 }
 
 .container-form{
-    padding-left: 350px;
+    padding-left: 450px;
 }
 
 .form{
@@ -50,7 +52,7 @@
 }
 
 .form-group {
-  margin-bottom: 1rem; /* o el espacio que quieras, por ejemplo 16px */
+    margin-bottom: 1rem; 
 }
 
 .btn-vista1{
