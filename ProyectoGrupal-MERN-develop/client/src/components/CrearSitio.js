@@ -47,14 +47,24 @@ const CrearSitio = () => {
         e.preventDefault();
 
         if (!nombre || !url || !logoUrl || !eslogan || !descripcion) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Campos incompletos',
-            text: 'Por favor completa todos los campos obligatorios antes de continuar.',
-            confirmButtonColor: '#3085d6',
-        });
-        return;
-    }
+            Swal.fire({
+                icon: 'warning',
+                title: 'Campos incompletos',
+                text: 'Por favor completa todos los campos obligatorios antes de continuar.',
+                confirmButtonColor: '#3085d6',
+            });
+
+            const nuevosErrores = {};
+            if (!nombre) nuevosErrores.nombre = { message: "Este campo es obligatorio" };
+            if (!url) nuevosErrores.url = { message: "Este campo es obligatorio" };
+            if (!logoUrl) nuevosErrores.logo = { message: "Este campo es obligatorio" };
+            if (!eslogan) nuevosErrores.eslogan = { message: "Este campo es obligatorio" };
+            if (!descripcion) nuevosErrores.descripcion = { message: "Este campo es obligatorio" };
+
+            setErrores(nuevosErrores);
+            return;
+        }
+        
         try {
             await addDoc(collection(db, 'imagen'), {
                 imagen: logoUrl,
@@ -97,7 +107,7 @@ const CrearSitio = () => {
                 if (err.response.status === 401) {
                     navigate("/iniciar-sesion")
                 } else {
-                    setErrores(err.response.data.errors)
+                    setErrores(err.response?.data?.errors || {});
                 }
             });
     }
