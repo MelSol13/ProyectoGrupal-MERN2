@@ -8,8 +8,6 @@ import { collection, addDoc, getDocs } from "firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { app } from "../credenciales"; 
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
-
 const db = getFirestore(app);
 const storage = getStorage(app);
 
@@ -31,6 +29,7 @@ const HacerPedido = () => {
     const { state } = useLocation();
     const navigate = useNavigate();
     const location = useLocation();
+    const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
     useEffect(() => {
         axios.get(`${API_BASE_URL}/api/pedidos/${id}`, { withCredentials: true })
@@ -56,7 +55,7 @@ const HacerPedido = () => {
         }
         imagendb();
 
-    }, [id])
+    }, [id,API_BASE_URL, navigate])
 
     const limpiarFormulario = () => {
         setEmprendimiento('');

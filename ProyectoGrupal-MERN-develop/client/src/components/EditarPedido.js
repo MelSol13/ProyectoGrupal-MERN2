@@ -43,7 +43,7 @@ const ActualizarPedido = () => {
                     navigate("/iniciar-sesion");
                 }
             });
-    }, [id]);
+    }, [id, API_BASE_URL, navigate]);
 
     const editarPedido = (e) => {
         e.preventDefault();

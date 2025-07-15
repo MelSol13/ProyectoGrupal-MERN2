@@ -5,8 +5,7 @@ import axios from 'axios';
 import { useNavigate, useLocation } from "react-router-dom";
 import "./CrearSitio.css"
 import ButtonLogout from './ButtonLogout';
-import { getFirestore } from "firebase/firestore/lite";  
-import { collection, addDoc, getDocs } from "firebase/firestore";  
+import { getFirestore, collection, addDoc, getDocs } from "firebase/firestore";    
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { app } from "../credenciales"; 
 
@@ -41,7 +40,7 @@ const CrearSitio = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const { state } = location; // Accede a las props pasadas desde IniciarSesion.js
+    const { state } = location; 
 
 
     const guardarSitio = async (e) => {

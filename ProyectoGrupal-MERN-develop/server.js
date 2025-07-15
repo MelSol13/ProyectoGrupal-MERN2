@@ -16,7 +16,8 @@ const PORT = process.env.PORT || 8000;
 
 const allowedOrigins = [
     "http://localhost:3000",
-    "https://melsol13.github.io"
+    "https://melsol13.github.io",
+    "https://melsol13.github.io/ProyectoGrupal-MERN2/"
 ];
 
 app.use(cors({
