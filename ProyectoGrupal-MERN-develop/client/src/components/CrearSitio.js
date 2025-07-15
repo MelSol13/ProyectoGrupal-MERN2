@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import { ChromePicker } from 'react-color';
 import axios from 'axios';
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation} from "react-router-dom";
 import "./CrearSitio.css"
 import ButtonLogout from './ButtonLogout';
 import { getFirestore, collection, addDoc } from "firebase/firestore";    
@@ -64,7 +64,7 @@ const CrearSitio = () => {
             setErrores(nuevosErrores);
             return;
         }
-        
+
         try {
             await addDoc(collection(db, 'imagen'), {
                 imagen: logoUrl,
@@ -243,12 +243,21 @@ const CrearSitio = () => {
                                 <ChromePicker className="color-informacion mb-4" color={colorInformacion} onChange={(color) => setColorInformacion(color.hex)} />
                             </div>
                             <div>
-                                <button type="submit" className="btn-vista1" onClick={guardarSitio}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-eye-fill" viewBox="0 0 16 16">
+                                <button type="submit" className="btn-vista1" onClick={guardarSitio}><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-eye-fill" viewBox="0 0 16 16" style={{ marginRight: '8px' }}>
                                     <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
                                     <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
                                 </svg>
                                     Vista Previa
                                 </button>
+                            <div>
+                                <button type="button" className="btn-sitios" onClick={() => navigate("/admin")}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-box-arrow-in-right" viewBox="0 0 16 16" style={{ marginRight: '8px' }}>
+                                <path fillRule="evenodd" d="M10 12.5a.5.5 0 0 0 .5.5H13a1 1 0 0 0 1-1v-9a1 1 0 0 0-1-1h-2.5a.5.5 0 0 0 0 1H13a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-2.5a.5.5 0 0 0-.5.5z"/>
+                                <path fillRule="evenodd" d="M3.646 8.354a.5.5 0 0 1 0-.708L6.293 5H1.5a.5.5 0 0 1 0-1h4.793L3.646 2.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0z"/>
+                                </svg>
+                                Ir a sitios
+                                </button>
+                                </div>
                             </div>
                         </div>
                     </form>

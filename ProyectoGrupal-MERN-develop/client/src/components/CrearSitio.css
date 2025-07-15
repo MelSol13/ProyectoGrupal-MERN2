@@ -63,7 +63,6 @@
     background-color: rgb(209, 86, 115);
     margin-top: 50px;
     margin-left: 12px;
-    margin-bottom: 50px;
     width: 200px;
     height: 50px;
     border-radius: 10px;
@@ -71,6 +70,25 @@
 }
 
 .btn-vista1:hover {
+    background-color: #e631e6;
+}
+
+.btn-sitios{
+    color:rgba(29, 10, 10, 0.685);
+    font-weight: bold;
+    font-size: 20px;
+    font-family:cursive;
+    background-color: rgb(209, 86, 115);
+    margin-top: 30px;
+    margin-left: 12px;
+    margin-bottom: 50px;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px rgb(216, 89, 169);
+}
+
+.btn-sitios:hover {
     background-color: #e631e6;
 }
 
