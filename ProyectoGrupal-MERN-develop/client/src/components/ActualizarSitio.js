@@ -24,7 +24,7 @@ const ActualizarSitio = () => {
     const [nombre, setNombre] = useState('');
     const [url, setUrl] = useState('');
     const [categoria, setCategoria] = useState('');
-    const [logo, setLogo] = useState('');
+    const [logoUrl, setLogoUrl] = useState('');
     const [eslogan, setEslogan] = useState('');
     const [descripcion, setDescripcion] = useState('');
     const [colorBarra, setColorBarra] = useState('#000000');
@@ -35,9 +35,7 @@ const ActualizarSitio = () => {
     const [servicio2, setServicio2] = useState('');
     const [servicio3, setServicio3] = useState('');
     const [contacto, setContacto] = useState('');
-    const [imagen1, setImagen1] = useState('');
-    const [imagen2, setImagen2] = useState('');
-    const [imagen3, setImagen3] = useState('');
+    const [imagenUrls, setImagenUrls] = useState(['', '', '']);
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
 
@@ -48,16 +46,14 @@ const ActualizarSitio = () => {
                 setNombre(sitio.nombre);
                 setUrl(sitio.url);
                 setCategoria(sitio.categoria);
-                setLogo(sitio.logo);
+                setLogoUrl(sitio.logo);
                 setEslogan(sitio.eslogan);
                 setDescripcion(sitio.descripcion);
                 setServicio1(sitio.servicio1);
                 setServicio2(sitio.servicio2);
                 setServicio3(sitio.servicio3);
                 setContacto(sitio.contacto);
-                setImagen1(sitio.imagen1);
-                setImagen2(sitio.imagen2);
-                setImagen3(sitio.imagen3);
+                setImagenUrls([sitio.imagen1, sitio.imagen2, sitio.imagen3]);
                 setColorBarra(sitio.colorBarra);
                 setColorFondo(sitio.colorFondo);
                 setColorInformacion(sitio.colorInformacion);
@@ -68,7 +64,7 @@ const ActualizarSitio = () => {
                     navigate("/iniciar-sesion");
                 }
             });
-    }, [id]);
+    }, [id, API_BASE_URL, navigate]);
 
 
     const actualizarSitio = (e) => {
@@ -77,16 +73,16 @@ const ActualizarSitio = () => {
             nombre,
             url,
             categoria,
-            logo:urlImDesc,
+            logo: logoUrl,
             eslogan,
             descripcion,
             servicio1,
             servicio2,
             servicio3,
             contacto,
-            imagen1:urlImDesc,
-            imagen2:urlImDesc,
-            imagen3:urlImDesc,
+            imagen1: imagenUrls[0],
+            imagen2: imagenUrls[1],
+            imagen3: imagenUrls[2],
             colorBarra,
             colorFondo,
             colorInformacion,
@@ -116,15 +112,25 @@ const ActualizarSitio = () => {
         { value: 'Skranji', label: 'Skranji' },
     ];
 
-    const fileHandler = async (e) => {
-        //detectar el archivo
+    const fileHandler = async (e, tipo) => {
         const archivoI = e.target.files[0];
-        //cargar al storage
-        const refArchivo = ref(storage,`imagenes/${archivoI.name}`)
-        await uploadBytes(refArchivo, archivoI)
-        //obtener url de la imagen de storage
-        urlImDesc = await getDownloadURL(refArchivo)
-    }
+        const refArchivo = ref(storage, `imagenes/${archivoI.name}`);
+        try {
+            await uploadBytes(refArchivo, archivoI);
+            const imageUrl = await getDownloadURL(refArchivo);
+
+            if (tipo === 'logo') {
+                setLogoUrl(imageUrl);
+            } else {
+                const index = parseInt(tipo);
+                const updatedUrls = [...imagenUrls];
+                updatedUrls[index] = imageUrl;
+                setImagenUrls(updatedUrls);
+            }
+        } catch (error) {
+            console.error('Error al subir imagen:', error);
+        }
+    };
 
 
     return (
@@ -151,19 +157,19 @@ const ActualizarSitio = () => {
                         </div>
                         <div className="form-group">
                             <label>Logo:</label>
-                            <input type="file" className="form-control"  onChange={fileHandler} />
+                            <input type="file" className="form-control"  onChange={(e) => fileHandler(e, 'logo')} />
                         </div>
                         <div className="form-group">
                             <label>Imagen 1:</label>
-                            <input type="file" className="form-control"  onChange={fileHandler} />
+                            <input type="file" className="form-control"  onChange={(e) => fileHandler(e, '0')} />
                         </div>
                         <div className="form-group">
                             <label>Imagen 2:</label>
-                            <input type="file" className="form-control" onChange={fileHandler} />
+                            <input type="file" className="form-control" onChange={(e) => fileHandler(e, '1')} />
                         </div>
                         <div className="form-group">
                             <label>Imagen 3:</label>
-                            <input type="file" className="form-control"  onChange={fileHandler} />
+                            <input type="file" className="form-control"  onChange={(e) => fileHandler(e, '2')} />
                         </div>
                         <div className="form-group">
                             <label>Eslogan:</label>
