@@ -5,16 +5,12 @@ import axios from 'axios';
 import { useNavigate, useParams } from "react-router-dom";
 import "./ActualizarSitio.css"
 import { UserName } from "./globals";
-import ButtonLogout from './ButtonLogout';
-import { getFirestore } from "firebase/firestore/lite";  
-import { collection, addDoc, getDocs } from "firebase/firestore";  
+import ButtonLogout from './ButtonLogout'; 
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { app } from "../credenciales"; 
 
-const db = getFirestore(app);
 const storage = getStorage(app);
 
-let urlImDesc;
 
 const ActualizarSitio = () => {
 
